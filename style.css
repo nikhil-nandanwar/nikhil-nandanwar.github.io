@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Preahvihear&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Preahvihear', sans-serif;
+}
+body{
+    background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+.uppernav{
+    display: flex;
+    align-items: center;
+    margin: 1vw;
+}
+.navbar{
+    height: 100%;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    border: 0.1vh solid black;
+    border-radius: 9vh;
+}
+.leftnav>p{
+    font-weight: 600;
+    font-size: large;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    justify-content: space-between;
+}
+li{
+    margin: 0 2vw;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.mainBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projectBody{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh 2vw;
+    padding: 0;
+    background-color: #0093E9;
+    background-image: linear-gradient(150deg,#0093E9 0%, #3838b2 33% , #4f50cd 66% , #0f07d7 100%);
+    border-radius: 3em;
+    box-shadow: 14px 11px 29px -5px rgba(203, 7, 7, 0.788);
+}
+.leftBody{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.rightBody{
+    height: 85%;
+    width: 80%;
+}
+#myPhoto{
+    height: 100%;
+    width: 100%;
+    border-radius: 2em;
+    align-items: center;
+    margin: 3em;
+}
+.leftBody>p{
+    text-align: center;
+}
+.myResume{
+    background-image: linear-gradient(to right, #FF512F 0% , #DD2476 51% , #FF512F 100%);
+    margin: 10px;
+    padding: 5px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 15px #eee;
+    border-radius: 10px;
+    display: block;
+}
+.myResume:hover{
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+.SkillName{
+    margin-top: 2em;
+    padding: 10em;
+    background-color: #07d72d90;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.skillSection{
+    padding: 3em;
+    display: grid;
+    row-gap: 3em;
+    column-gap: 3em;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+#skillls{
+    height: 90%;
+    width: 100%;
+}
+.skill{
+    background-color: white;
+    height: 12em;
+    width: 10em;
+    display: grid;
+    padding: 1em;
+    border-radius: 2em;
+    box-shadow: 14px 11px 29px -5px rgba(0,0,0,0.1);
+}
