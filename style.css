@@ -30,14 +30,14 @@ body{
     font-weight: 600;
     font-size: large;
 }
-ul{
+.rightnav>ul{
     list-style: none;
     display: flex;
     align-items: center;
     font-size: medium;
     justify-content: space-between;
 }
-li{
+.rightnav > ul >li{
     margin: 0 2vw;
 }
 a {
@@ -52,16 +52,16 @@ a {
 }
 .projectBody{
     width: 80%;
-    height: 80vh;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2vh 2vw;
+    margin: 2% 2%;
     padding: 0;
     background-color: #0093E9;
     background-image: linear-gradient(150deg,#0093E9 0%, #3838b2 33% , #4f50cd 66% , #0f07d7 100%);
     border-radius: 3em;
-    box-shadow: 14px 11px 29px -5px rgba(203, 7, 7, 0.788);
+    box-shadow: 1.4em 1em 3em -5px rgba(203, 7, 7, 0.788);
 }
 .leftBody{
     width: 90%;
@@ -86,15 +86,15 @@ a {
 }
 .myResume{
     background-image: linear-gradient(to right, #FF512F 0% , #DD2476 51% , #FF512F 100%);
-    margin: 10px;
-    padding: 5px 15px;
+    margin: 5em;
+    padding: 0.7em 3em;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;
-    box-shadow: 0 0 15px #eee;
-    border-radius: 10px;
+    box-shadow: 0 0 2em #eee;
+    border-radius: 10em;
     display: block;
 }
 .myResume:hover{
@@ -134,7 +134,7 @@ a {
     display: grid;
     padding: 1em;
     border-radius: 2em;
-    box-shadow: 14px 11px 29px -5px rgba(0,0,0,0.1);
+    box-shadow: 4em 1em 9em -5em rgba(0,0,0,0.1);
 }
 .skillProject{
     padding: 3em;
@@ -152,5 +152,11 @@ a {
     display: grid;
     padding: 1em;
     border-radius: 2em;
-    box-shadow: 14px 11px 29px -5px rgba(0,0,0,0.1);
+    box-shadow: 4em 1em 9em -5em rgba(0,0,0,0.1);
+}
+
+.biggerFotter{
+    background-color: rgba(0, 0, 0, 0.589);
+    height: 100%;
+    width: 100%;
 }
