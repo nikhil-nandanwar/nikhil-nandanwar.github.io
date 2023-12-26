@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"> 
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -99,15 +99,15 @@
 
     <footer class="biggerFotter">
         <div class="contactSection">
-            <ul>
+            <ul class="socialMedia">
                 <li>
-                    <img src="LinkedIn.png" alt="LinkedIn">
+                    <a href="!"><img src="LinkedIn.png" alt="LinkedIn" id="social"></a>
                 </li>
                 <li>
-                    <img src="GitHub.png" alt="GitHub">
+                    <a href="@"><img src="GitHub.png" alt="GitHub" id="social"></a>
                 </li>
                 <li>
-                    <img src="Email.png" alt="Email">
+                    <a href="#"><img src="Email.png" alt="Email" id="social"></a>
                 </li>
                 <li>
                     
@@ -115,7 +115,12 @@
             </ul>
         </div>
         <div class="feedbackForm">
-
+            <form action="">
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="email">
+                <label for="suggestion">Feedback</label>
+                <textarea name="suggestion" id="suggestion" cols="30" rows="5"></textarea>
+            </form>
         </div>
     </footer>
 </body>
