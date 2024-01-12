@@ -164,7 +164,11 @@ a {
     align-items: center;
 }
 #social{
-    height: 8vh;
+    height: 4em;
+    width: 4em;
+}
+li{
+    list-style: none;
 }
 .socialMedia{
     display: flex;
@@ -174,4 +178,11 @@ a {
 form{
     display: flex;
     flex-direction: column;
+}
+.contactSection{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 25%;
+
 }
