@@ -116,12 +116,9 @@ a {
 }  */
 .skillSection{
     padding: 3em;
-    display: grid;
-    row-gap: 3em;
-    column-gap: 3em;
-    
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(2,1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
 }
 #skillls{
     height: 90%;
@@ -131,14 +128,16 @@ a {
     background-color: white;
     height: 12em;
     width: 10em;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     padding: 1em;
     border-radius: 2em;
     box-shadow: 4em 1em 9em -5em rgba(0,0,0,0.1);
 }
 .skillProject{
     padding: 3em;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     row-gap: 3em;
     column-gap: 3em;
     
@@ -149,7 +148,8 @@ a {
     background-color: white;
     height: 13em;
     width: 20em;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     padding: 1em;
     border-radius: 2em;
     box-shadow: 4em 1em 9em -15px rgba(0,0,0,0.1);
@@ -160,6 +160,7 @@ a {
     height: 50vh;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
