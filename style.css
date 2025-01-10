@@ -16,6 +16,11 @@ body {
     transition: background-color 1s ease-in-out;
 }
 
+.note{
+    text-align: center;
+    font-size: xx-small;
+}
+
 .window {
     width: 70%;
     animation: fadeInBlur 1s ease-in-out;
@@ -24,7 +29,7 @@ body {
 @keyframes fadeInBlur {
     from {
         opacity: 0;
-        filter: blur(5px);
+        filter: blur(6px);
         /* transform: translateY(-20px); */
     }
     to {
@@ -34,14 +39,14 @@ body {
     }
 }
 
-.navbar, .mainBody, .projectBody, .leftBody, .rightBody, .uppernav {
-    animation: slideUp 1.5s ease-in-out;
+/* .navbar, .mainBody, .projectBody, .leftBody, .rightBody, .uppernav {
+    animation: slideUp 1s ease-in-out;
 }
 
 @keyframes slideUp {
     from {transform: translateY(50px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
-}
+} */
 
 .uppernav {
     display: flex;
@@ -56,7 +61,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 2em;
+    padding: 0.5em 8em ;
     border: 0.2em solid #2b2929;
 }
 
@@ -94,6 +99,7 @@ a {
 }
 
 .mainBody {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +107,6 @@ a {
 
 .projectBody {
     width: 80%;
-    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,35 +114,15 @@ a {
     padding: 0;
     background-color: #0093E9;
     /* background-image: linear-gradient(150deg, #0093E9 0%, #3838b2 33%, #4f50cd 66%, #0f07d7 100%); */
-    border-radius: 3em;
+    /* border-radius: 3em; */
     box-shadow: 1.4em 1em 3em -5px rgba(78, 76, 76, 0.788);
 }
 
-.leftBody {
-    width: 90%;
+.leftBody {    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-}
-
-.rightBody {
-    height: 85%;
-    width: 80%;
-}
-
-.rightBody img {
-    max-width: 100%;
-    border-radius: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-#myPhoto {
-    height: 100%;
-    width: 100%;
-    border-radius: 2em;
-    align-items: center;
-    margin: 3em;
 }
 
 .leftBody>p {
@@ -156,11 +141,14 @@ a {
 
 /* .biggerSkill{
     display: flex;
+    align-items: center;
     justify-content: center;
 }  */
 .skillSection {
     padding: 3em;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2em;
 }
@@ -184,12 +172,11 @@ a {
 .skillProject {
     padding: 3em;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    row-gap: 3em;
-    column-gap: 3em;
-
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2em;
+    column-gap: 5em;
 }
 
 .project {
