@@ -1,21 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Preahvihear&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Preahvihear', sans-serif;
 }
-body{
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #85FFBD;
-  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    transition: background-color 1s ease-in-out;
 }
-.uppernav{
+
+.window {
+    width: 70%;
+    animation: fadeInBlur 1s ease-in-out;
+}
+
+@keyframes fadeInBlur {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+        /* transform: translateY(-20px); */
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        /* transform: translateY(0); */
+    }
+}
+
+.navbar, .mainBody, .projectBody, .leftBody, .rightBody, .uppernav {
+    animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {transform: translateY(50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+.uppernav {
     display: flex;
     align-items: center;
     margin: 1em;
 }
-.navbar{
+
+.navbar {
     height: 100%;
     width: 100%;
     background-color: beige;
@@ -23,34 +57,49 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 1em 2em;
-    border: 0.1em solid black;
-    border-radius: 9em;
+    border: 0.2em solid #2b2929;
 }
-.leftnav>p{
+
+.navbar a:hover {
+    color: white;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.leftnav>p {
     font-weight: 600;
     font-size: large;
 }
-.rightnav>ul{
+
+.rightnav>ul {
     list-style: none;
     display: flex;
     align-items: center;
     font-size: medium;
     justify-content: space-between;
 }
-.rightnav > ul >li{
+
+.rightnav>ul>li {
     margin: 0 2rem;
+    border: 0.2rem solid;
 }
+
 a {
     text-decoration: none;
     color: black;
+    padding: 0.2rem 0.9rem;
     font-weight: 500;
+    /* background-color: rgb(75, 73, 73); */
 }
-.mainBody{
+
+.mainBody {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.projectBody{
+
+.projectBody {
     width: 80%;
     height: 80%;
     display: flex;
@@ -59,50 +108,44 @@ a {
     margin: 2% 2%;
     padding: 0;
     background-color: #0093E9;
-    background-image: linear-gradient(150deg,#0093E9 0%, #3838b2 33% , #4f50cd 66% , #0f07d7 100%);
+    /* background-image: linear-gradient(150deg, #0093E9 0%, #3838b2 33%, #4f50cd 66%, #0f07d7 100%); */
     border-radius: 3em;
-    box-shadow: 1.4em 1em 3em -5px rgba(203, 7, 7, 0.788);
+    box-shadow: 1.4em 1em 3em -5px rgba(78, 76, 76, 0.788);
 }
-.leftBody{
+
+.leftBody {
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
-.rightBody{
+
+.rightBody {
     height: 85%;
     width: 80%;
 }
-#myPhoto{
+
+.rightBody img {
+    max-width: 100%;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#myPhoto {
     height: 100%;
     width: 100%;
     border-radius: 2em;
     align-items: center;
     margin: 3em;
 }
-.leftBody>p{
+
+.leftBody>p {
     text-align: center;
 }
-.myResume{
-    background-image: linear-gradient(to right, #FF512F 0% , #DD2476 51% , #FF512F 100%);
-    margin: 5em;
-    padding: 0.7em 3em;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    box-shadow: 0 0 2em #eee;
-    border-radius: 10em;
-    display: block;
-}
-.myResume:hover{
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
-}
-.SkillTag{
+
+
+.SkillTag {
     margin-top: 2em;
     padding: 10em;
     background-color: #07d72d90;
@@ -110,21 +153,24 @@ a {
     padding-bottom: 0;
     padding-top: 0;
 }
+
 /* .biggerSkill{
     display: flex;
     justify-content: center;
 }  */
-.skillSection{
+.skillSection {
     padding: 3em;
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
 }
-#skillls{
+
+#skillls {
     height: 90%;
     width: 100%;
 }
-.skill{
+
+.skill {
     background-color: white;
     height: 12em;
     width: 10em;
@@ -132,19 +178,21 @@ a {
     flex-wrap: wrap;
     padding: 1em;
     border-radius: 2em;
-    box-shadow: 4em 1em 9em -5em rgba(0,0,0,0.1);
+    box-shadow: 4em 1em 9em -5em rgba(0, 0, 0, 0.1);
 }
-.skillProject{
+
+.skillProject {
     padding: 3em;
     display: flex;
     flex-wrap: wrap;
     row-gap: 3em;
     column-gap: 3em;
-    
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
-.project{
+
+.project {
     background-color: white;
     height: 13em;
     width: 20em;
@@ -152,10 +200,10 @@ a {
     flex-wrap: wrap;
     padding: 1em;
     border-radius: 2em;
-    box-shadow: 4em 1em 9em -15px rgba(0,0,0,0.1);
+    box-shadow: 4em 1em 9em -15px rgba(0, 0, 0, 0.1);
 }
 
-.biggerFotter{
+.biggerFotter {
     background-color: rgba(0, 0, 0, 0.589);
     height: 50vh;
     width: 100%;
@@ -164,26 +212,46 @@ a {
     justify-content: space-around;
     align-items: center;
 }
-#social{
+
+#social {
     height: 4em;
     width: 4em;
 }
-li{
+
+li {
     list-style: none;
 }
-.socialMedia{
+
+.socialMedia {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
 }
-.contactSection{
+
+.contactSection {
     display: flex;
     flex-direction: column;
     height: auto;
     width: 25%;
 
+}
+
+@media (max-width: 768px) {
+    .window {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .projectBody {
+        flex-direction: column;
+    }
 }

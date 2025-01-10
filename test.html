@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Nandanwar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Preahvihear&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Preahvihear', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #85FFBD;
+            background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+            transition: background-color 1s ease-in-out;
+        }
+
+        .window {
+            width: 70%;
+            animation: fadeInBlur 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInBlur {
+            from {
+                opacity: 0;
+                filter: blur(10px);
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                filter: blur(0);
+                transform: translateY(0);
+            }
+        }
+
+        .navbar, .mainBody, .projectBody, .leftBody, .rightBody, .uppernav {
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {transform: translateY(50px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+
+        .navbar a:hover {
+            color: white;
+            background-color: black;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .rightBody img {
+            max-width: 100%;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .rightBody img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .window {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .projectBody {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <div class="uppernav">
+            <div class="navbar">
+                <div class="leftnav">
+                    <p>Welcome</p>
+                </div>
+                <div class="rightnav">
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1H1hJdTbTwsxHjI2F-TfWyxbO0Sx-IKDE/view" target="_blank">Resume</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mainBody">
+            <div class="projectBody">
+                <div class="leftBody">
+                    <h1>Nikhil Nandanwar</h1>
+                    <p>I am an IT student pursuing B.Tech from Yeshwantrao Chavan College of Engineering</p>
+                    <button class="myResume"><a href="https://drive.google.com/uc?export=download&id=1H1hJdTbTwsxHjI2F-TfWyxbO0Sx-IKDE">Download Resume</a></button>
+                </div>
+                <div class="rightBody">
+                    <img src="images/upscale_3.jpg" alt="My photo">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
