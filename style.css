@@ -16,7 +16,7 @@ body {
     transition: background-color 1s ease-in-out;
 }
 
-.note{
+.note {
     text-align: center;
     font-size: xx-small;
 }
@@ -32,6 +32,7 @@ body {
         filter: blur(6px);
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         filter: blur(0);
@@ -39,13 +40,25 @@ body {
     }
 }
 
-.navbar, .mainBody, .projectBody, .leftBody, .rightBody, .uppernav {
+.navbar,
+.mainBody,
+.projectBody,
+.leftBody,
+.rightBody,
+.uppernav {
     animation: slideUp 1s ease-in-out;
 }
 
 @keyframes slideUp {
-    from {transform: translateY(50px); opacity: 0;}
-    to {transform: translateY(0); opacity: 1;}
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .uppernav {
@@ -61,7 +74,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5em 8em ;
+    padding: 0.5em 8em;
     border: 0.2em solid #2b2929;
 }
 
@@ -118,7 +131,7 @@ a {
     box-shadow: 0.5em 0.5em 0.9em -5px rgba(78, 76, 76, 0.788);
 }
 
-.leftBody {    
+.leftBody {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,7 +158,7 @@ a {
     justify-content: center;
 }  */
 .skillSection {
-    padding:1rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,6 +182,12 @@ a {
     box-shadow: 4em 1em 9em -5em rgba(0, 0, 0, 0.1);
 }
 
+.skill:hover, .socialMedia > li:hover {
+    scale: 1.1;
+    transition: all 0.3s ease;
+    background-color: #f0f0f0;
+}
+
 .skillProject {
     padding: 3em;
     display: flex;
@@ -188,6 +207,12 @@ a {
     padding: 1em;
     border-radius: 2em;
     box-shadow: 4em 1em 9em -15px rgba(0, 0, 0, 0.1);
+}
+
+.project>img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .biggerFotter {
@@ -213,7 +238,97 @@ li {
     align-items: center;
     justify-content: space-around;
 }
+.socialMedia> li{
+    border-radius: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+
+/* Project Section Styles */
+.projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.425);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.project-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.6rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.project-info p {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.project-links {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+}
+
+.github-link {
+    background-color: #24292e;
+    color: white;
+}
+
+.live-link {
+    background-color: #0070f3;
+    color: white;
+}
+
+.project-links a:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
 
 @media (max-width: 768px) {
     .window {
@@ -221,7 +336,7 @@ li {
         padding: 10px;
     }
 
-    .projectBody{
+    .projectBody {
         font-size: small;
     }
 
@@ -232,9 +347,10 @@ li {
     .projectBody {
         flex-direction: column;
     }
-    .SkillTag{
-        padding: 0 ;
+
+    .SkillTag {
+        padding: 0;
         text-align: center;
-    
+
     }
 }
