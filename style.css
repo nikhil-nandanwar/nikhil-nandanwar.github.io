@@ -51,7 +51,7 @@ body {
 .uppernav {
     display: flex;
     align-items: center;
-    margin: 1em;
+    margin: 0 1em 1em 1em;
 }
 
 .navbar {
@@ -133,11 +133,10 @@ a {
 
 .SkillTag {
     margin-top: 2em;
-    padding: 10em;
+    padding: 0 10em;
     background-color: #07d72d90;
     margin-bottom: 0;
-    padding-bottom: 0;
-    padding-top: 0;
+    text-align: center;
 }
 
 /* .biggerSkill{
@@ -232,5 +231,10 @@ li {
 
     .projectBody {
         flex-direction: column;
+    }
+    .SkillTag{
+        padding: 0 ;
+        text-align: center;
+    
     }
 }
