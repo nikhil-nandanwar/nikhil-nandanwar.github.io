@@ -1,127 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nikhil Nandanwar | Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="window">
-        <nav class="navbar">
-            <div class="logo">
-                <span>NK</span>
+      <nav class="navbar">
+        <div class="logo">
+          <span>NK</span>
+        </div>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a
+            href="https://drive.google.com/file/d/1a34IlLdV2abZPOogcSp-NQhYE6eKHniJ/view"
+            target="_blank"
+            class="resume-btn"
+          >
+            Resume <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </nav>
+
+      <section id="about" class="hero-section">
+        <div class="hero-content">
+          <h1>Hi, I'm <span class="gradient-text">Nikhil Nandanwar</span></h1>
+          <p class="hero-description">
+            Full Stack Developer working with React, Node.js, and MongoDB |
+            Building web applications with focus on user experience and
+            scalability
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/nikhil-nandanwar-b5969b25b/"
+              title="LinkedIn"
+              class="social-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/nikhilnandanwar429"
+              title="GitHub"
+              class="social-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://x.com/NikhilNand429"
+              title="Twitter"
+              class="social-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill" title="HTML5">
+            <i class="fab fa-html5"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="skill" title="CSS3">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="skill" title="JavaScript">
+            <i class="fab fa-js"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill" title="React">
+            <i class="fab fa-react"></i>
+            <span>React</span>
+          </div>
+          <div class="skill" title="Node.js">
+            <i class="fab fa-node-js"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="skill" title="MongoDB">
+            <i class="fas fa-database"></i>
+            <span>MongoDB</span>
+          </div>
+          <div class="skill" title="C++">
+            <i class="fas fa-code"></i>
+            <span>C++</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="https://drive.google.com/thumbnail?id=1b9Av5N6iNu1Kgy5rx1D80LWV56soASfU"
+                alt="GeminiChat"
+              />
             </div>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="https://drive.google.com/file/d/1a34IlLdV2abZPOogcSp-NQhYE6eKHniJ/view" target="_blank" class="resume-btn">
-                    Resume <i class="fas fa-external-link-alt"></i>
+            <div class="project-content">
+              <h3>GeminiChat</h3>
+              <p>
+                A GeminiAI interface with features like conversation sharing and
+                storage for future reference.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/nikhilnandanwar429/GeminiApp"
+                  class="github-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github"></i> Code
                 </a>
+                <a
+                  href="https://ai-by-gemini.netlify.app/"
+                  class="live-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
             </div>
-        </nav>
+          </article>
 
-        <section id="about" class="hero-section">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="gradient-text">Nikhil Nandanwar</span></h1>
-                <p class="hero-description">Full Stack Developer working with React, Node.js, and MongoDB | Building web applications with focus on user experience and scalability</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/nikhil-nandanwar-b5969b25b/" title="LinkedIn" class="social-btn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/nikhilnandanwar429" title="GitHub" class="social-btn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://x.com/NikhilNand429" title="Twitter" class="social-btn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="https://drive.google.com/thumbnail?id=1EicgcNUyO1TVa9PLE-ioLpbqijuO9rbH"
+                alt="Mines Game"
+              />
             </div>
-        </section>
-
-        <section id="skills" class="skills-section">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill" title="HTML5">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="skill" title="CSS3">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="skill" title="JavaScript">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill" title="React">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                </div>
-                <div class="skill" title="Node.js">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="skill" title="MongoDB">
-                    <i class="fas fa-database"></i>
-                    <span>MongoDB</span>
-                </div>
-                <div class="skill" title="C++">
-                    <i class="fas fa-code"></i>
-                    <span>C++</span>
-                </div>
+            <div class="project-content">
+              <h3>Mines Game</h3>
+              <p>
+                An online rendition of the classic Minesweeper game with
+                adjustable difficulty levels.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/nikhilnandanwar429/Mines"
+                  class="github-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a
+                  href="https://mines-game.netlify.app/"
+                  class="live-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
             </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="https://drive.google.com/thumbnail?id=1b9Av5N6iNu1Kgy5rx1D80LWV56soASfU" alt="GeminiChat">
-                    </div>
-                    <div class="project-content">
-                        <h3>GeminiChat</h3>
-                        <p>A GeminiAI interface with features like conversation sharing and storage for future reference.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/nikhilnandanwar429/GeminiApp" class="github-btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://ai-by-gemini.netlify.app/" class="live-btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="https://drive.google.com/thumbnail?id=1EicgcNUyO1TVa9PLE-ioLpbqijuO9rbH" alt="Mines Game">
-                    </div>
-                    <div class="project-content">
-                        <h3>Mines Game</h3>
-                        <p>An online rendition of the classic Minesweeper game with adjustable difficulty levels.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/nikhilnandanwar429/Mines" class="github-btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://mines-game.netlify.app/" class="live-btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
+          </article>
+        </div>
+      </section>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
