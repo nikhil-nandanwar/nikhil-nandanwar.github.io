@@ -11,13 +11,690 @@
   <meta property="og:title" content="Nikhil Nandanwar | Portfolio">
   <meta property="og:description"
     content="Explore the portfolio of Nikhil Nandanwar, a Full Stack Developer specializing in modern web applications. Discover projects, skills, and more.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print"
+    onload="this.media='all'">
+
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </noscript>
+
+  <style>
+    .social-links,
+    .footer-social {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    :root {
+      --background: #111;
+      --text: #ffffff;
+      --text-secondary: #b3b3b3;
+      --accent: #ffffff;
+      --border: #2a2a2a;
+      --card-bg: #1a1a1a;
+      --hover-bg: #ffffff;
+      --hover-text: #111111;
+      --shadow: rgba(255, 255, 255, 0.08);
+      --skill-bg: #ffffff;
+      --skill-text: #111111;
+      --nav-hover-bg: rgba(255, 255, 255, 0.1);
+      --image-filter: brightness(0.95);
+      --focus-ring: rgba(255, 255, 255, 0.5);
+    }
+
+    :root[data-theme="light"] {
+      --background: #ffffff;
+      --text: #111111;
+      --text-secondary: #555555;
+      --accent: #111111;
+      --border: #e0e0e0;
+      --card-bg: #f8f8f8;
+      --hover-bg: #111111;
+      --hover-text: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.08);
+      --skill-bg: #111111;
+      --skill-text: #ffffff;
+      --nav-hover-bg: rgba(0, 0, 0, 0.05);
+      --image-filter: brightness(1);
+      --focus-ring: rgba(0, 0, 0, 0.5);
+    }
+
+    html,
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: "kern" 1;
+      text-rendering: optimizeLegibility;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    *:focus {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 2px;
+    }
+
+    *:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    *:focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 2px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      transition: background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        outline-color 0.3s ease;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--text-secondary);
+    }
+
+    header.main-header {
+      background: var(--background);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 2rem;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s ease;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 2rem;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .theme-toggle {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: var(--hover-bg);
+      color: var(--hover-text);
+      transform: scale(1.1);
+    }
+
+    .theme-toggle .fa-sun {
+      display: none;
+    }
+
+    .theme-toggle .fa-moon {
+      display: block;
+    }
+
+    :root[data-theme="light"] .theme-toggle .fa-sun {
+      display: block;
+    }
+
+    :root[data-theme="light"] .theme-toggle .fa-moon {
+      display: none;
+    }
+
+    .nav-links a {
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 1.05rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background: var(--nav-hover-bg);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        padding: 0.5rem 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 0;
+        z-index: 200;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 4px 12px var(--shadow);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: flex;
+      }
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      min-height: 4.5rem;
+    }
+
+    .accent {
+      color: var(--accent);
+      background: linear-gradient(90deg, var(--accent) 60%, var(--text-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    .hero-description {
+      color: var(--text-secondary);
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      min-height: 3.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      background: var(--card-bg);
+      color: var(--text);
+      border-radius: 50%;
+      padding: 0.8rem;
+      font-size: 1.3rem;
+      border: 1px solid var(--border);
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+
+    .social-links a:hover,
+    .social-links a:focus {
+      background: var(--hover-bg);
+      color: var(--hover-text);
+      transform: translateY(-3px);
+    }
+
+    .skills-section,
+    .projects-section {
+      margin-top: 4rem;
+      animation: fadeIn 1s;
+    }
+
+    .skills-section h2,
+    .projects-section h2 {
+      text-align: center;
+      font-size: 2.75rem;
+      margin-bottom: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      font-family: 'Outfit', sans-serif;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: stretch;
+      padding: 0 1rem;
+    }
+
+    .skill {
+      flex: 0 1 120px;
+      min-width: 100px;
+      max-width: 180px;
+    }
+
+    .skill {
+      background: var(--skill-bg);
+      color: var(--skill-text);
+      padding: 2rem 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      border: 2px solid var(--border);
+      box-shadow: 0 2px 12px var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .skill i {
+      font-size: 2.2rem;
+      margin-bottom: 0.7rem;
+      color: var(--skill-text);
+    }
+
+    .skill span {
+      display: block;
+      color: var(--skill-text);
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px) scale(1.04);
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      padding: 1rem 0 2rem 0;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 12px var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 4px 24px var(--shadow);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 180px;
+      background: var(--card-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+      filter: var(--image-filter, none);
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 1.3rem 1.2rem 1.2rem 1.2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-content h3 {
+      margin-bottom: 0.75rem;
+      color: var(--text);
+      font-size: 1.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .project-content p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 1.4rem;
+      line-height: 1.6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-links a {
+      background: var(--hover-bg);
+      color: var(--hover-text);
+      padding: 0.5rem 1.1rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.2s, color 0.2s;
+      border: 1px solid var(--border);
+    }
+
+    .project-links a:hover,
+    .project-links a:focus {
+      background: var(--background);
+      color: var(--text);
+      border: 1px solid var(--text);
+    }
+
+    footer.site-footer {
+      background: var(--background);
+      color: var(--text);
+      padding: 2.5rem 0 1.2rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      font-size: 1rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 0 2rem;
+    }
+
+    .footer-about {
+      flex: 1 1 220px;
+      min-width: 200px;
+    }
+
+    .footer-logo {
+      font-size: 2rem;
+      font-weight: bold;
+      display: inline-block;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      margin-left: 0;
+      transition: color 0.3s ease;
+    }
+
+    .footer-about p {
+      color: #888686;
+      margin: 0.5rem 0 0 0;
+    }
+
+    .footer-nav ul {
+      color: var(--text);
+      text-decoration: none;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .footer-nav a:hover,
+    .footer-nav a:focus {
+      color: var(--hover-text);
+      background: var(--hover-bg);
+      outline: none;
+    }
+
+    .footer-nav a {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-nav a {
+      color: var(--text);
+      background: transparent;
+      text-decoration: none;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .footer-nav a:hover,
+    .footer-nav a:focus {
+      color: var(--hover-text);
+      background: var(--hover-bg);
+      outline: none;
+    }
+
+    .footer-nav a:focus {
+      color: #bbb;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      min-width: 200px;
+    }
+
+    .footer-contact a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-contact a:hover,
+    .footer-contact a:focus {
+      text-decoration: underline;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-social a {
+      color: var(--text);
+      background: var(--card-bg);
+      border-radius: 50%;
+      padding: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      border: 1px solid var(--border);
+    }
+
+    .footer-social a:hover,
+    .footer-social a:focus {
+      background: var(--hover-bg);
+      color: var(--hover-text);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-top: 2rem;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        padding: 1rem;
+      }
+
+      .footer-content {
+        padding: 0 1rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: row;
+        padding: 1rem 0.5rem;
+      }
+
+      .logo {
+        width: auto;
+        height: auto;
+        font-size: 1.5rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 1.5rem;
+      }
+
+      .footer-logo {
+        width: auto;
+        height: auto;
+        font-size: 1.1rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
   <meta property="og:url" content="https://nikhilnandanwar.me">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,12 +705,10 @@
   <meta name="twitter:creator" content="@nixhiill">
   <meta name="twitter:domain" content="nikhilnandanwar.me">
   <meta name="twitter:url" content="https://nikhilnandanwar.me">
-
   <meta name="twitter:image" content="https://nikhilnandanwar.me/assets/preview.webp">
   <link rel="canonical" href="https://nikhilnandanwar.me">
   <link rel="alternate" href="https://nikhilnandanwar.me" hreflang="en">
   <link rel="alternate" href="https://nikhilnandanwar.me" hreflang="x-default">
-
 </head>
 
 <body>
