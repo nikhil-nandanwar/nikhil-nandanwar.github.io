@@ -28,11 +28,25 @@
     <link rel="stylesheet" href="style.css">
   </noscript>
 
-  <!-- <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- Force font-display: swap -->
+  <style>
+    @font-face {
+      font-family: 'Outfit';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/outfit/v11/LDloaoMQw.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Plus Jakarta Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/plusjakartasans/v14/QGYvz_MVc.woff2') format('woff2');
+    }
+  </style>
+
   <meta property="og:image" content="https://nikhilnandanwar.me/assets/preview.webp">
   <meta property="og:title" content="Nikhil Nandanwar | Full Stack Developer Portfolio">
   <meta property="og:description"
@@ -47,7 +61,6 @@
   <link rel="canonical" href="https://nikhilnandanwar.me">
   <link rel="alternate" href="https://nikhilnandanwar.me" hreflang="en">
   <link rel="alternate" href="https://nikhilnandanwar.me" hreflang="x-default">
-
 
 </head>
 
@@ -161,7 +174,7 @@
         <p>Portfolio of Nikhil Nandanwar — Full Stack Developer. Connect for collaboration or opportunities.</p>
       </div>
       <nav class="footer-nav">
-        <ul>
+  <ul style="list-style: none; padding-left: 0;">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
