@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light dark">
   <title>Nikhil Nandanwar | Portfolio</title>
   <meta name="description" content="Professional portfolio of Nikhil Nandanwar, Full Stack Developer.">
   <link rel="icon" type="image/webp" href="assets/codeLogo.webp">
@@ -15,12 +17,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="assets/codeLogo.webp" as="image" type="image/webp">
+  <link rel="preload" href="script.js" as="script">
+  
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'">
+    rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print"
-    onload="this.media='all'">
+    onload="this.media='all'; this.onload=null;">
 
   <noscript>
     <link
@@ -30,6 +41,51 @@
   </noscript>
 
   <style>
+    /* Critical CSS for improved loading */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Use contain property to optimize repaints and reflows */
+    .skill, .project-card, .experience-card {
+      contain: layout style paint;
+    }
+
+    /* Use transform3d to enable hardware acceleration */
+    .skill:hover, .project-card:hover, .experience-card:hover {
+      transform: translate3d(0, -5px, 0) scale(1.03);
+    }
+
+    /* Optimize animations for better performance */
+    .skill, .project-card, .experience-card, .social-links a, .nav-links a {
+      will-change: auto;
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+
+    /* Critical CSS for fonts to prevent layout shift */
+    html {
+      font-display: swap;
+    }
+
+    /* Prevent layout shift for images */
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+
+    /* Optimize scrolling performance */
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Reduce paint complexity */
+    * {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+
     /* Experience Section */
     .experience-section {
       margin-top: 4rem;
@@ -74,8 +130,9 @@
     }
 
     .experience-card:hover {
-      transform: translateY(-5px) scale(1.03);
+      transform: translate3d(0, -5px, 0) scale(1.03);
       box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+      will-change: transform;
     }
 
     .experience-card h3 {
@@ -312,7 +369,8 @@
     .nav-links a:focus {
       background: var(--nav-hover-bg);
       color: var(--hover-text);
-      transform: translateY(-1px);
+      transform: translate3d(0, -1px, 0);
+      will-change: transform;
     }
 
     @media (max-width: 900px) {
@@ -437,8 +495,9 @@
     .social-links a:focus {
       background: var(--hover-bg);
       color: var(--hover-text);
-      transform: translateY(-3px) scale(1.08);
+      transform: translate3d(0, -3px, 0) scale(1.08);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+      will-change: transform;
     }
 
     .skills-section,
@@ -503,8 +562,9 @@
     }
 
     .skill:hover {
-      transform: translateY(-5px) scale(1.04);
+      transform: translate3d(0, -5px, 0) scale(1.04);
       box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+      will-change: transform;
     }
 
     .projects-grid {
@@ -526,8 +586,9 @@
     }
 
     .project-card:hover {
-      transform: translateY(-5px) scale(1.02);
+      transform: translate3d(0, -5px, 0) scale(1.02);
       box-shadow: 0 4px 24px var(--shadow);
+      will-change: transform;
     }
 
     .project-image {
@@ -736,7 +797,8 @@
     .footer-social a:focus {
       background: var(--hover-bg);
       color: var(--hover-text);
-      transform: translateY(-2px);
+      transform: translate3d(0, -2px, 0);
+      will-change: transform;
     }
 
     .footer-bottom {
@@ -997,7 +1059,8 @@
       <div class="projects-grid">
         <article class="project-card">
           <div class="project-image">
-            <img src="assets/onlineClipboard.webp" alt="ShareVault project screenshot" loading="lazy">
+            <img src="assets/onlineClipboard.webp" alt="ShareVault project screenshot" loading="lazy" 
+                 decoding="async" width="320" height="180">
           </div>
           <div class="project-content">
             <h3>
@@ -1018,7 +1081,8 @@
         </article>
         <article class="project-card">
           <div class="project-image">
-            <img src="assets/geminiChat.webp" alt="GeminiChat project screenshot" loading="lazy">
+            <img src="assets/geminiChat.webp" alt="GeminiChat project screenshot" loading="lazy" 
+                 decoding="async" width="320" height="180">
           </div>
           <div class="project-content">
             <h3>
@@ -1039,7 +1103,8 @@
         </article>
         <article class="project-card">
           <div class="project-image">
-            <img src="assets/minesGame.webp" alt="Mines Game project screenshot" loading="lazy">
+            <img src="assets/minesGame.webp" alt="Mines Game project screenshot" loading="lazy" 
+                 decoding="async" width="320" height="180">
           </div>
           <div class="project-content">
             <h3>
@@ -1129,6 +1194,21 @@
   }
   </script>
   <script src="script.js" defer></script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
 </body>
 
 </html>
