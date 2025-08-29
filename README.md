@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my projects and skills. Built 
 
 ## 🚀 Live Demo
 
-[View Live Site](https://nikhilnandanwar429.github.io/)
+[View Live Site](https://nikhil-nandanwar.github.io/)
 
 ## ⚡ Tech Stack
 
@@ -56,6 +56,6 @@ A modern, responsive portfolio website showcasing my projects and skills. Built 
 
 ## 🤝 Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/nikhil-nandanwar-b5969b25b/)
-- [GitHub](https://github.com/nikhilnandanwar429)
-- [Twitter](https://x.com/NikhilNand429)
+- [LinkedIn](https://www.linkedin.com/in/nandanwar-nikhil/)
+- [GitHub](https://github.com/nikhil-nandanwar)
+- [Twitter](https://x.com/nixhiill)
