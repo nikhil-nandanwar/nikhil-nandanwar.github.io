@@ -6,7 +6,8 @@ const getPreferredTheme = () => {
   if (savedTheme) {
     return savedTheme;
   }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  // Default to light theme instead of following system preference
+  return 'light';
 };
 
 const setTheme = (theme) => {

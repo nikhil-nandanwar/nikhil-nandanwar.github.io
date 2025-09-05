@@ -17,11 +17,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  
+
   <!-- Preload critical assets -->
   <link rel="preload" href="assets/codeLogo.webp" as="image" type="image/webp">
   <link rel="preload" href="script.js" as="script">
-  
+
   <!-- DNS prefetch for external resources -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -47,17 +47,25 @@
     }
 
     /* Use contain property to optimize repaints and reflows */
-    .skill, .project-card, .experience-card {
+    .skill,
+    .project-card,
+    .experience-card {
       contain: layout style paint;
     }
 
     /* Use transform3d to enable hardware acceleration */
-    .skill:hover, .project-card:hover, .experience-card:hover {
+    .skill:hover,
+    .project-card:hover,
+    .experience-card:hover {
       transform: translate3d(0, -5px, 0) scale(1.03);
     }
 
     /* Optimize animations for better performance */
-    .skill, .project-card, .experience-card, .social-links a, .nav-links a {
+    .skill,
+    .project-card,
+    .experience-card,
+    .social-links a,
+    .nav-links a {
       will-change: auto;
       backface-visibility: hidden;
       perspective: 1000px;
@@ -184,23 +192,6 @@
     }
 
     :root {
-      --background: #111;
-      --text: #ffffff;
-      --text-secondary: #c2bfbf;
-      --accent: #ffffff;
-      --border: #ffffff;
-      --card-bg: #0f0f0f;
-      --hover-bg: #ffffff;
-      --hover-text: #111111;
-      --shadow: rgba(255, 255, 255, 0.055);
-      --skill-bg: #111111;
-      --skill-text: #ffffff;
-      --nav-hover-bg: rgb(255, 255, 255);
-      --image-filter: brightness(0.95);
-      --focus-ring: rgba(255, 255, 255, 0.5);
-    }
-
-    :root[data-theme="light"] {
       --background: #ffffff;
       --text: #000000;
       --text-secondary: #383737;
@@ -215,6 +206,23 @@
       --nav-hover-bg: rgb(0, 0, 0);
       --image-filter: brightness(1);
       --focus-ring: rgba(0, 0, 0, 0.5);
+    }
+
+    :root[data-theme="dark"] {
+      --background: #111;
+      --text: #ffffff;
+      --text-secondary: #c2bfbf;
+      --accent: #ffffff;
+      --border: #ffffff;
+      --card-bg: #0f0f0f;
+      --hover-bg: #ffffff;
+      --hover-text: #111111;
+      --shadow: rgba(255, 255, 255, 0.055);
+      --skill-bg: #111111;
+      --skill-text: #ffffff;
+      --nav-hover-bg: rgb(255, 255, 255);
+      --image-filter: brightness(0.95);
+      --focus-ring: rgba(255, 255, 255, 0.5);
     }
 
     html,
@@ -342,19 +350,19 @@
     }
 
     .theme-toggle .fa-sun {
-      display: none;
+      display: block;
     }
 
     .theme-toggle .fa-moon {
-      display: block;
-    }
-
-    :root[data-theme="light"] .theme-toggle .fa-sun {
-      display: block;
-    }
-
-    :root[data-theme="light"] .theme-toggle .fa-moon {
       display: none;
+    }
+
+    :root[data-theme="dark"] .theme-toggle .fa-sun {
+      display: none;
+    }
+
+    :root[data-theme="dark"] .theme-toggle .fa-moon {
+      display: block;
     }
 
     .nav-links a {
@@ -1059,8 +1067,8 @@
       <div class="projects-grid">
         <article class="project-card">
           <div class="project-image">
-            <img src="assets/onlineClipboard.webp" alt="ShareVault project screenshot" loading="lazy" 
-                 decoding="async" width="320" height="180">
+            <img src="assets/onlineClipboard.webp" alt="ShareVault project screenshot" loading="lazy" decoding="async"
+              width="320" height="180">
           </div>
           <div class="project-content">
             <h3>
@@ -1081,8 +1089,8 @@
         </article>
         <article class="project-card">
           <div class="project-image">
-            <img src="assets/geminiChat.webp" alt="GeminiChat project screenshot" loading="lazy" 
-                 decoding="async" width="320" height="180">
+            <img src="assets/geminiChat.webp" alt="GeminiChat project screenshot" loading="lazy" decoding="async"
+              width="320" height="180">
           </div>
           <div class="project-content">
             <h3>
@@ -1103,8 +1111,8 @@
         </article>
         <article class="project-card">
           <div class="project-image">
-            <img src="assets/minesGame.webp" alt="Mines Game project screenshot" loading="lazy" 
-                 decoding="async" width="320" height="180">
+            <img src="assets/minesGame.webp" alt="Mines Game project screenshot" loading="lazy" decoding="async"
+              width="320" height="180">
           </div>
           <div class="project-content">
             <h3>
@@ -1194,7 +1202,7 @@
   }
   </script>
   <script src="script.js" defer></script>
-  
+
   <!-- Service Worker Registration -->
   <script>
     if ('serviceWorker' in navigator) {
