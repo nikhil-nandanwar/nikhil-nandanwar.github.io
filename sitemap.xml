@@ -2,16 +2,67 @@
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+      xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
+<!-- Main Portfolio Page -->
 <url>
   <loc>https://nikhilnandanwar.me/</loc>
+  <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
-  <lastmod>2025-07-12T19:34:33+00:00</lastmod>
+  <image:image>
+    <image:loc>https://nikhilnandanwar.me/assets/preview.webp</image:loc>
+    <image:caption>Nikhil Nandanwar Full Stack Developer Portfolio - React.js, Node.js, MongoDB Expert</image:caption>
+    <image:title>Portfolio Preview</image:title>
+    <image:geo_location>India</image:geo_location>
+  </image:image>
+  <image:image>
+    <image:loc>https://nikhilnandanwar.me/assets/onlineClipboard.webp</image:loc>
+    <image:caption>ShareVault Secure File Sharing Application built with React.js and Node.js</image:caption>
+    <image:title>ShareVault Project</image:title>
+  </image:image>
+  <image:image>
+    <image:loc>https://nikhilnandanwar.me/assets/geminiChat.webp</image:loc>
+    <image:caption>GeminiChat AI Conversation Platform using Google Gemini API and React.js</image:caption>
+    <image:title>GeminiChat Project</image:title>
+  </image:image>
+  <image:image>
+    <image:loc>https://nikhilnandanwar.me/assets/minesGame.webp</image:loc>
+    <image:caption>Classic Minesweeper Game Implementation with JavaScript, HTML5, CSS3</image:caption>
+    <image:title>Mines Game Project</image:title>
+  </image:image>
+  <image:image>
+    <image:loc>https://nikhilnandanwar.me/assets/codeLogo.webp</image:loc>
+    <image:caption>Nikhil Nandanwar Developer Logo</image:caption>
+    <image:title>NK Logo</image:title>
+  </image:image>
 </url>
 
+<!-- About Section -->
+<url>
+  <loc>https://nikhilnandanwar.me/#about</loc>
+  <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.90</priority>
+</url>
+
+<!-- Skills Section -->
+<url>
+  <loc>https://nikhilnandanwar.me/#skills</loc>
+  <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+</url>
+
+<!-- Projects Section -->
+<url>
+  <loc>https://nikhilnandanwar.me/#projects</loc>
+  <lastmod>2025-09-06T10:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
 
 </urlset>

@@ -1,0 +1,47 @@
+NIKHIL NANDANWAR - FULL STACK DEVELOPER BIO
+
+NAME: Nikhil Nandanwar
+PROFESSION: Full Stack Web Developer
+SPECIALIZATION: React.js, Node.js, MongoDB, JavaScript
+
+ABOUT:
+Nikhil Nandanwar is an experienced Full Stack Developer with expertise in modern web technologies. He specializes in building scalable, responsive web applications using React.js for frontend development, Node.js for backend services, and MongoDB for database management. 
+
+TECHNICAL SKILLS:
+- Frontend: React.js, JavaScript (ES6+), HTML5, CSS3, TailwindCSS, Next.js, React Native
+- Backend: Node.js, Express.js, RESTful APIs
+- Database: MongoDB, SQL
+- Tools: Git, Version Control, Responsive Design
+- Programming: C++, Modern JavaScript Frameworks
+- Design: User Experience (UX), User Interface (UI), Mobile-First Development
+
+FEATURED PROJECTS:
+1. ShareVault - Secure file and text sharing platform with 4-digit code system
+2. GeminiChat - AI-powered chat interface with conversation storage
+3. Mines Game - Modern implementation of classic Minesweeper
+
+CONTACT INFORMATION:
+- Website: https://nikhilnandanwar.me
+- LinkedIn: https://www.linkedin.com/in/nandanwar-nikhil
+- GitHub: https://github.com/nikhil-nandanwar
+- Twitter/X: https://x.com/nixhiill
+
+AVAILABILITY: Available for freelance projects and full-time opportunities
+
+LOCATION: India (Remote work available)
+
+EXPERTISE AREAS:
+- Full Stack Web Development
+- Frontend Development with React.js
+- Backend API Development with Node.js
+- Database Design and Management
+- Responsive Web Design
+- Performance Optimization
+- SEO Optimization
+- Modern JavaScript Development
+- Mobile App Development (React Native)
+
+EDUCATION: Computer Science background with focus on web development technologies
+
+WORK APPROACH:
+Focuses on clean code architecture, user experience, performance optimization, and delivering scalable solutions. Emphasizes modern development practices, responsive design, and accessibility standards.

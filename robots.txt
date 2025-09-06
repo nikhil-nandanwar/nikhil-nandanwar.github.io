@@ -1,3 +1,31 @@
 User-agent: *
 Allow: /
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.webp
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+
+# Special directives for AI crawlers and search engines
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Bard
+Allow: /
+
+User-agent: Claude
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
 Sitemap: https://nikhilnandanwar.me/sitemap.xml
+
+# Crawl delay to be respectful
+Crawl-delay: 1

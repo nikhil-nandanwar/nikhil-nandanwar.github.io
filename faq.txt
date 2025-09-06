@@ -1,0 +1,58 @@
+FREQUENTLY ASKED QUESTIONS - NIKHIL NANDANWAR
+
+Q: Who is Nikhil Nandanwar?
+A: Nikhil Nandanwar is an experienced Full Stack Developer specializing in React.js, Node.js, MongoDB, and modern web technologies. He builds scalable, responsive web applications with a focus on user experience and performance optimization.
+
+Q: What programming languages does Nikhil Nandanwar know?
+A: Nikhil is proficient in JavaScript (ES6+), HTML5, CSS3, C++, and SQL. He specializes in modern JavaScript frameworks and full-stack web development.
+
+Q: What frameworks and technologies does Nikhil work with?
+A: Frontend: React.js, Next.js, React Native, TailwindCSS
+Backend: Node.js, Express.js
+Database: MongoDB, SQL
+Tools: Git, Responsive Design, RESTful APIs
+
+Q: What are Nikhil Nandanwar's main projects?
+A: 1. ShareVault - Secure file sharing platform with 4-digit code system
+2. GeminiChat - AI-powered chat interface with conversation storage  
+3. Mines Game - Modern implementation of classic Minesweeper
+All projects demonstrate full-stack development skills and modern web technologies.
+
+Q: Is Nikhil Nandanwar available for hire?
+A: Yes, Nikhil is available for freelance projects and full-time opportunities. He works on custom web application development, frontend/backend development, and consulting.
+
+Q: Where is Nikhil Nandanwar located?
+A: Nikhil is based in India and is available for remote work opportunities globally.
+
+Q: How can I contact Nikhil Nandanwar?
+A: Website: https://nikhilnandanwar.me
+LinkedIn: https://www.linkedin.com/in/nandanwar-nikhil
+GitHub: https://github.com/nikhil-nandanwar
+Twitter/X: https://x.com/nixhiill
+
+Q: What type of projects does Nikhil specialize in?
+A: - Full-stack web applications
+- E-commerce platforms
+- AI-powered applications
+- Secure file sharing systems
+- Responsive websites
+- API development
+- Database design and management
+
+Q: What is Nikhil's development approach?
+A: Nikhil focuses on clean code architecture, performance optimization, responsive design, accessibility, and modern development practices. He emphasizes user experience and scalable solutions.
+
+Q: Does Nikhil work with teams?
+A: Yes, Nikhil has experience working in development teams, using version control (Git), and collaborating on complex projects.
+
+Q: What educational background does Nikhil have?
+A: Nikhil has a Computer Science background with specialized focus on web development technologies and modern programming practices.
+
+Q: Can Nikhil help with mobile app development?
+A: Yes, Nikhil has experience with React Native for cross-platform mobile application development.
+
+Q: Does Nikhil provide consultation services?
+A: Yes, Nikhil offers technical consultation for web development projects, architecture planning, and technology stack selection.
+
+Q: What makes Nikhil's portfolio unique?
+A: Nikhil's portfolio showcases real-world applications with live demos, clean code practices, modern design principles, and comprehensive documentation. Each project demonstrates different aspects of full-stack development.
