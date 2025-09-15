@@ -467,7 +467,7 @@
       .nav-links {
         display: none;
         position: absolute;
-        top: 64px;
+        top: 50px;
         left: 0;
         right: 0;
         background: var(--card-bg);
@@ -485,6 +485,10 @@
 
       .menu-btn {
         display: flex;
+      }
+
+      .navbar {
+        padding: 0.3rem 0.5rem;
       }
     }
 
@@ -524,29 +528,27 @@
       font-style: normal;
     }
 
-    .hero-description {
-      color: var(--text-secondary);
-      font-size: 1.25rem;
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-      font-weight: 400;
-      letter-spacing: -0.01em;
-      min-height: 3.5rem;
-    }
+      .hero-description {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.7;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        min-height: 3.5rem;
+      }
+
       @media (max-width: 480px) {
         .hero-description {
-          font-size: 1rem;
+          font-size: 0.95rem;
           max-width: 95vw;
           min-height: unset;
           word-break: break-word;
         }
-      }
-
-    .social-links {
+      }    .social-links {
       display: flex;
       gap: 1.2rem;
       justify-content: center;
@@ -939,6 +941,82 @@
         width: auto;
         height: auto;
         font-size: 1.1rem;
+      }
+
+      /* Navbar extra slim for mobile */
+      .navbar {
+        padding: 0.25rem 0.5rem;
+      }
+
+      .logo {
+        font-size: 1.6rem;
+      }
+
+      .theme-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+      }
+
+      .menu-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.6rem;
+      }
+
+      .nav-links {
+        top: 45px;
+        padding: 1.5rem 0;
+        gap: 1.2rem;
+      }
+
+      /* Skills section mobile adjustments */
+      .skills-section h2,
+      .projects-section h2 {
+        font-size: 2.2rem;
+      }
+
+      .skill {
+        flex: 0 1 110px;
+        min-width: 110px;
+        max-width: 110px;
+        min-height: 110px;
+        max-height: 110px;
+        padding: 1rem 0.4rem;
+      }
+
+      .skill i {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .skill span {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      /* Project cards mobile adjustments */
+      .project-content h3 {
+        font-size: 1.3rem;
+      }
+
+      .project-content p {
+        font-size: 0.95rem;
+      }
+
+      /* Navigation mobile adjustments */
+      .nav-links a {
+        font-size: 0.95rem;
+        padding: 0.4rem 1rem;
+      }
+
+      /* Footer mobile adjustments */
+      .footer-about p {
+        font-size: 0.9rem;
+      }
+
+      .footer-bottom {
+        font-size: 0.85rem;
       }
     }
 
