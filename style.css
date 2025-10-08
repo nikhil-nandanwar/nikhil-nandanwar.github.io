@@ -1,3 +1,56 @@
+/* Critical CSS for improved loading */
+* {
+  box-sizing: border-box;
+}
+
+/* Use contain property to optimize repaints and reflows */
+.skill,
+.project-card,
+.experience-card {
+  contain: layout style paint;
+}
+
+/* Use transform3d to enable hardware acceleration */
+.skill:hover,
+.project-card:hover,
+.experience-card:hover {
+  transform: translate3d(0, -5px, 0) scale(1.03);
+}
+
+/* Optimize animations for better performance */
+.skill,
+.project-card,
+.experience-card,
+.social-links a,
+.nav-links a {
+  will-change: auto;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Critical CSS for fonts to prevent layout shift */
+html {
+  font-display: swap;
+}
+
+/* Prevent layout shift for images */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Optimize scrolling performance */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Reduce paint complexity */
+* {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 /* Experience Section */
 .experience-section {
   margin-top: 4rem;
@@ -42,8 +95,9 @@
 }
 
 .experience-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 4px 20px rgba(255,255,255,0.08);
+  transform: translate3d(0, -5px, 0) scale(1.03);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+  will-change: transform;
 }
 
 .experience-card h3 {
@@ -81,11 +135,13 @@
     gap: 1.5rem;
     padding: 0 0.5rem;
   }
+
   .experience-card {
     max-width: 100%;
     min-width: 0;
   }
 }
+
 .social-links,
 .footer-social {
   list-style: none;
@@ -278,7 +334,8 @@ header.main-header {
 .nav-links a:focus {
   background: var(--nav-hover-bg);
   color: var(--hover-text);
-  transform: translateY(-1px);
+  transform: translate3d(0, -1px, 0);
+  will-change: transform;
 }
 
 @media (max-width: 900px) {
@@ -295,7 +352,7 @@ header.main-header {
   .nav-links {
     display: none;
     position: absolute;
-    top: 64px;
+    top: 50px;
     left: 0;
     right: 0;
     background: var(--card-bg);
@@ -313,6 +370,10 @@ header.main-header {
 
   .menu-btn {
     display: flex;
+  }
+
+  .navbar {
+    padding: 0.3rem 0.5rem;
   }
 }
 
@@ -353,7 +414,6 @@ main {
 }
 
 .hero-description {
-  color: var(--text-secondary);
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
   line-height: 1.7;
@@ -364,6 +424,15 @@ main {
   font-weight: 400;
   letter-spacing: -0.01em;
   min-height: 3.5rem;
+}
+
+@media (max-width: 480px) {
+  .hero-description {
+    font-size: 0.95rem;
+    max-width: 95vw;
+    min-height: unset;
+    word-break: break-word;
+  }
 }
 
 .social-links {
@@ -384,7 +453,7 @@ main {
   justify-content: center;
   font-size: 1.3rem;
   border: 1.5px solid var(--border);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
   transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s, border-color 0.2s;
   padding: 0;
 }
@@ -403,8 +472,9 @@ main {
 .social-links a:focus {
   background: var(--hover-bg);
   color: var(--hover-text);
-  transform: translateY(-3px) scale(1.08);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+  transform: translate3d(0, -3px, 0) scale(1.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+  will-change: transform;
 }
 
 .skills-section,
@@ -469,8 +539,9 @@ main {
 }
 
 .skill:hover {
-  transform: translateY(-5px) scale(1.04);
+  transform: translate3d(0, -5px, 0) scale(1.04);
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+  will-change: transform;
 }
 
 .projects-grid {
@@ -492,8 +563,9 @@ main {
 }
 
 .project-card:hover {
-  transform: translateY(-5px) scale(1.02);
+  transform: translate3d(0, -5px, 0) scale(1.02);
   box-shadow: 0 4px 24px var(--shadow);
+  will-change: transform;
 }
 
 .project-image {
@@ -702,7 +774,8 @@ footer.site-footer {
 .footer-social a:focus {
   background: var(--hover-bg);
   color: var(--hover-text);
-  transform: translateY(-2px);
+  transform: translate3d(0, -2px, 0);
+  will-change: transform;
 }
 
 .footer-bottom {
@@ -755,6 +828,82 @@ footer.site-footer {
     width: auto;
     height: auto;
     font-size: 1.1rem;
+  }
+
+  /* Navbar extra slim for mobile */
+  .navbar {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .theme-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .menu-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.6rem;
+  }
+
+  .nav-links {
+    top: 45px;
+    padding: 1.5rem 0;
+    gap: 1.2rem;
+  }
+
+  /* Skills section mobile adjustments */
+  .skills-section h2,
+  .projects-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .skill {
+    flex: 0 1 110px;
+    min-width: 110px;
+    max-width: 110px;
+    min-height: 110px;
+    max-height: 110px;
+    padding: 1rem 0.4rem;
+  }
+
+  .skill i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill span {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Project cards mobile adjustments */
+  .project-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-content p {
+    font-size: 0.95rem;
+  }
+
+  /* Navigation mobile adjustments */
+  .nav-links a {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+  }
+
+  /* Footer mobile adjustments */
+  .footer-about p {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
   }
 }
 
