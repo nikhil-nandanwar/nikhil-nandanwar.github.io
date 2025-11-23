@@ -1,1024 +1,770 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Nikhil Nandanwar | Portfolio</title>
+    <meta
+      name="description"
+      content="Professional portfolio of Nikhil Nandanwar, Full Stack Developer."
+    />
+    <link rel="icon" type="image/webp" href="assets/codeLogo.webp" />
+    <meta
+      property="og:image"
+      content="https://nikhilnandanwar.me/assets/preview.webp"
+    />
+    <meta property="og:title" content="Nikhil Nandanwar | Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore the portfolio of Nikhil Nandanwar, a Full Stack Developer specializing in modern web applications. Discover projects, skills, and more."
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="color-scheme" content="light dark">
-  <title>Nikhil Nandanwar | Portfolio</title>
-  <meta name="description" content="Professional portfolio of Nikhil Nandanwar, Full Stack Developer.">
-  <link rel="icon" type="image/webp" href="assets/codeLogo.webp">
-  <meta property="og:image" content="https://nikhilnandanwar.me/assets/preview.webp">
-  <meta property="og:title" content="Nikhil Nandanwar | Portfolio">
-  <meta property="og:description"
-    content="Explore the portfolio of Nikhil Nandanwar, a Full Stack Developer specializing in modern web applications. Discover projects, skills, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Preload critical assets -->
+    <link
+      rel="preload"
+      href="assets/codeLogo.webp"
+      as="image"
+      type="image/webp"
+    />
+    <link rel="preload" href="script.js" as="script" />
 
-  <!-- Preload critical assets -->
-  <link rel="preload" href="assets/codeLogo.webp" as="image" type="image/webp">
-  <link rel="preload" href="script.js" as="script">
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 
-  <!-- DNS prefetch for external resources -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print"
-    onload="this.media='all'; this.onload=null;">
-
-  <noscript>
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  </noscript>
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
+    />
 
-  <style>
-    /* Critical CSS for improved loading */
-    * {
-      box-sizing: border-box;
-    }
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+    </noscript>
 
-    /* Use contain property to optimize repaints and reflows */
-    .skill,
-    .project-card,
-    .experience-card {
-      contain: layout style paint;
-    }
+    <style>
+      :root {
+        /* Light Theme Variables */
+        --background: #ffffff;
+        --text: #1a1a1a;
+        --text-secondary: #666666;
+        --accent: #346ce4; /* Modern Blue */
+        --accent-glow: rgba(37, 99, 235, 0.15);
+        --border: #d3d3d5;
+        --card-bg: #ffffff;
+        --header-bg: rgba(255, 255, 255, 0.8);
+        --hover-bg: #f3f4f6;
+        --hover-text: #111827;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
-    /* Use transform3d to enable hardware acceleration */
-    .skill:hover,
-    .project-card:hover,
-    .experience-card:hover {
-      transform: translate3d(0, -5px, 0) scale(1.03);
-    }
-
-    /* Optimize animations for better performance */
-    .skill,
-    .project-card,
-    .experience-card,
-    .social-links a,
-    .nav-links a {
-      will-change: auto;
-      backface-visibility: hidden;
-      perspective: 1000px;
-    }
-
-    /* Critical CSS for fonts to prevent layout shift */
-    html {
-      font-display: swap;
-    }
-
-    /* Prevent layout shift for images */
-    img {
-      height: auto;
-      max-width: 100%;
-    }
-
-    /* Optimize scrolling performance */
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    /* Reduce paint complexity */
-    * {
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-    }
-
-    /* Experience Section */
-    .experience-section {
-      margin-top: 4rem;
-      animation: fadeIn 1s;
-    }
-
-    .experience-section h2 {
-      text-align: center;
-      font-size: 2.75rem;
-      margin-bottom: 3rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      font-family: 'Outfit', sans-serif;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-    }
-
-    .experience-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      align-items: stretch;
-      padding: 0 1rem;
-    }
-
-    .experience-card {
-      background: var(--card-bg);
-      color: var(--text);
-      border-radius: 1rem;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 12px var(--shadow);
-      padding: 2rem 1.5rem 1.5rem 1.5rem;
-      min-width: 280px;
-      max-width: 400px;
-      flex: 1 1 320px;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .experience-card:hover {
-      transform: translate3d(0, -5px, 0) scale(1.03);
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
-      will-change: transform;
-    }
-
-    .experience-card h3 {
-      font-size: 1.3rem;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .experience-card p {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .experience-card ul {
-      padding-left: 1.2rem;
-      margin: 0;
-      color: var(--text-secondary);
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    .experience-card ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    @media (max-width: 900px) {
-      .experience-grid {
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 0 0.5rem;
+        /* Spacing & Layout - Compact Mode */
+        --base-font-size: 15px;
+        --container-padding: 1.5rem;
+        --card-radius: 0.75rem;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      .experience-card {
+      :root[data-theme="dark"] {
+        --background: #050505; /* Almost Black */
+        --text: #ffffff;
+        --text-secondary: #a0a0a0;
+        --accent: #346ce4; /* White accent for monochrome look */
+        --accent-glow: rgba(255, 255, 255, 0.15);
+        --border: #2d2c2c;
+        --card-bg: #0f0f0f;
+        --header-bg: rgba(5, 5, 5, 0.8);
+        --hover-bg: #1a1a1a;
+        --hover-text: #ffffff;
+        --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.05);
+        --shadow-hover: 0 10px 15px -3px rgba(255, 255, 255, 0.1);
+      }
+
+      /* Reset & Base */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-size: var(--base-font-size);
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--background);
+        color: var(--text);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 1.6;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
+      }
+      ul {
+        list-style: none;
+      }
+      img {
         max-width: 100%;
-        min-width: 0;
+        display: block;
       }
-    }
 
-    .social-links,
-    .footer-social {
-      list-style: none;
-      padding-left: 0;
-    }
+      /* Layout */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 var(--container-padding);
+      }
+      section {
+        margin-bottom: 4rem;
+        scroll-margin-top: 80px;
+      }
 
-    :root {
-      --background: #ffffff;
-      --text: #000000;
-      --text-secondary: #383737;
-      --accent: #111111;
-      --border: #000000;
-      --card-bg: #ffffff;
-      --hover-bg: #111111;
-      --hover-text: #ffffff;
-      --shadow: rgba(0, 0, 0, 0.08);
-      --skill-bg: #ffffff;
-      --skill-text: #050505;
-      --nav-hover-bg: rgb(0, 0, 0);
-      --image-filter: brightness(1);
-      --focus-ring: rgba(0, 0, 0, 0.5);
-    }
-
-    :root[data-theme="dark"] {
-      --background: #111;
-      --text: #ffffff;
-      --text-secondary: #c2bfbf;
-      --accent: #ffffff;
-      --border: #ffffff;
-      --card-bg: #0f0f0f;
-      --hover-bg: #ffffff;
-      --hover-text: #111111;
-      --shadow: rgba(255, 255, 255, 0.055);
-      --skill-bg: #111111;
-      --skill-text: #ffffff;
-      --nav-hover-bg: rgb(255, 255, 255);
-      --image-filter: brightness(0.95);
-      --focus-ring: rgba(255, 255, 255, 0.5);
-    }
-
-    html,
-    body {
-      background: var(--background);
-      color: var(--text);
-      font-family: 'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif;
-      min-height: 100vh;
-      scroll-behavior: smooth;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      font-feature-settings: "kern" 1;
-      text-rendering: optimizeLegibility;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    *:focus {
-      outline: 2px solid var(--focus-ring);
-      outline-offset: 2px;
-    }
-
-    *:focus:not(:focus-visible) {
-      outline: none;
-    }
-
-    *:focus-visible {
-      outline: 2px solid var(--focus-ring);
-      outline-offset: 2px;
-    }
-
-    *,
-    *::before,
-    *::after {
-      transition: background-color 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease,
-        outline-color 0.3s ease;
-    }
-
-    a {
-      color: var(--text);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover,
-    a:focus {
-      color: var(--text-secondary);
-    }
-
-    header.main-header {
-      background: var(--background);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.7rem 2rem;
-    }
-
-    .logo {
-      font-size: 2.2rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      font-family: 'Outfit', sans-serif;
-      width: auto;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: color 0.3s ease;
-    }
-
-    .menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: var(--text);
-      font-size: 2rem;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .theme-toggle {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      color: var(--text);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-      background: var(--hover-bg);
-      color: var(--hover-text);
-      transform: scale(1.1);
-    }
-
-    .theme-toggle .fa-sun {
-      display: block;
-    }
-
-    .theme-toggle .fa-moon {
-      display: none;
-    }
-
-    :root[data-theme="dark"] .theme-toggle .fa-sun {
-      display: none;
-    }
-
-    :root[data-theme="dark"] .theme-toggle .fa-moon {
-      display: block;
-    }
-
-    .nav-links a {
-      padding: 0.5rem 1.2rem;
-      border-radius: 6px;
-      font-weight: 500;
-      font-size: 1.05rem;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus {
-      background: var(--nav-hover-bg);
-      color: var(--hover-text);
-      transform: translate3d(0, -1px, 0);
-      will-change: transform;
-    }
-
-    @media (max-width: 900px) {
+      /* Header */
+      .main-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: var(--header-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
       .navbar {
-        padding: 0.5rem 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0.8rem var(--container-padding);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-family: "Outfit", sans-serif;
+        font-weight: 800;
+        font-size: 1.4rem;
+        letter-spacing: -0.02em;
+        color: var(--text);
+      }
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      .nav-links a {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        position: relative;
+      }
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: var(--accent);
+        transition: width 0.3s ease;
+      }
+      .nav-links a:hover::after {
+        width: 100%;
       }
 
-      .nav-links {
+      /* Theme Toggle */
+      .theme-toggle {
+        background: transparent;
+        border: 1px solid var(--border);
+        color: var(--text);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .theme-toggle:hover {
+        background: var(--hover-bg);
+        transform: rotate(15deg);
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .theme-toggle .fa-sun {
+        display: none;
+      }
+      .theme-toggle .fa-moon {
+        display: block;
+      }
+      :root[data-theme="dark"] .theme-toggle .fa-sun {
+        display: block;
+      }
+      :root[data-theme="dark"] .theme-toggle .fa-moon {
+        display: none;
+      }
+
+      /* Hero */
+      .hero-section {
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 3rem;
+      }
+      .hero-content h1 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.03em;
+      }
+      .accent {
+        background: linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-description {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto 1.5rem;
+      }
+      .social-links {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+      }
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        transition: var(--transition);
+      }
+      .social-links a:hover {
+        transform: translateY(-3px);
+        color: var(--accent);
+        border-color: var(--accent);
+        box-shadow: var(--shadow);
+      }
+
+      /* Headings */
+      h2 {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 2rem;
+        letter-spacing: -0.02em;
+      }
+
+      /* Skills */
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+      }
+      .skill {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        padding: 0.8rem 1.2rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        min-width: 100px;
+        transition: var(--transition);
+        color: var(--text);
+      }
+      .skill:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        box-shadow: var(--shadow-hover);
+      }
+      .skill i,
+      .skill svg {
+        font-size: 1.5rem;
+        color: var(--text);
+        transition: color 0.3s;
+      }
+      .skill svg path {
+        fill: currentColor;
+      }
+      .skill:hover i,
+      .skill:hover svg {
+        color: var(--accent);
+      }
+      .skill span {
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+
+      /* Projects */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .project-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        overflow: hidden;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+      }
+      .project-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-hover);
+        border-color: var(--accent-glow);
+      }
+      .project-image {
+        height: 180px;
+        overflow: hidden;
+        background: var(--hover-bg);
+        position: relative;
+      }
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .project-card:hover .project-image img {
+        transform: scale(1.05);
+      }
+      .project-content {
+        padding: 1.2rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-content h3 {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.15rem;
+        margin-bottom: 0.4rem;
+        font-weight: 700;
+      }
+      .project-content p {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+        flex: 1;
+      }
+      .project-links {
+        display: flex;
+        gap: 0.8rem;
+      }
+      .project-links a {
+        padding: 0.4rem 0.8rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: var(--transition);
+      }
+      .project-links a:hover {
+        background: var(--hover-bg);
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
+      /* Footer */
+      .site-footer {
+        border-top: 1px solid var(--border);
+        background: var(--card-bg);
+        padding: 4rem 0 2rem;
+        margin-top: 6rem;
+      }
+      .footer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 var(--container-padding);
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 4rem;
+      }
+      .footer-brand p {
+        color: var(--text-secondary);
+        margin: 1rem 0 1.5rem;
+        max-width: 300px;
+        font-size: 0.95rem;
+      }
+      .footer-social {
+        display: flex;
         gap: 1rem;
       }
-    }
-
-    @media (max-width: 700px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 64px;
-        left: 0;
-        right: 0;
-        background: var(--card-bg);
-        flex-direction: column;
-        gap: 1.5rem;
-        padding: 2rem 0;
-        z-index: 200;
-        border-bottom: 1px solid var(--border);
-        box-shadow: 0 4px 12px var(--shadow);
-      }
-
-      .nav-links.active {
+      .footer-social a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
         display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+        transition: var(--transition);
       }
-
-      .menu-btn {
-        display: flex;
+      .footer-social a:hover {
+        background: var(--text);
+        color: var(--background);
+        border-color: var(--text);
       }
-    }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .hero-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 70vh;
-      text-align: center;
-      animation: fadeIn 1s;
-    }
-
-    .hero-content h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      font-family: 'Outfit', sans-serif;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      min-height: 4.5rem;
-    }
-
-    .accent {
-      color: var(--accent);
-      background: linear-gradient(90deg, var(--accent) 60%, var(--text-secondary) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-weight: 800;
-      font-style: normal;
-    }
-
-    .hero-description {
-      color: var(--text-secondary);
-      font-size: 1.25rem;
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-      font-weight: 400;
-      letter-spacing: -0.01em;
-      min-height: 3.5rem;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      background: var(--card-bg);
-      color: var(--text);
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      border: 1.5px solid var(--border);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-      transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-      padding: 0;
-    }
-
-    .social-links a i {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-    }
-
-    .social-links a:hover,
-    .social-links a:focus {
-      background: var(--hover-bg);
-      color: var(--hover-text);
-      transform: translate3d(0, -3px, 0) scale(1.08);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
-      will-change: transform;
-    }
-
-    .skills-section,
-    .projects-section {
-      margin-top: 4rem;
-      animation: fadeIn 1s;
-    }
-
-    .skills-section h2,
-    .projects-section h2 {
-      text-align: center;
-      font-size: 2.75rem;
-      margin-bottom: 3rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      font-family: 'Outfit', sans-serif;
-      position: relative;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-    }
-
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      align-items: stretch;
-      padding: 0 1rem;
-    }
-
-    .skill {
-      flex: 0 1 140px;
-      min-width: 140px;
-      max-width: 140px;
-      min-height: 140px;
-      max-height: 140px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: var(--skill-bg);
-      color: var(--skill-text);
-      padding: 1.5rem 0.5rem;
-      border-radius: 1rem;
-      text-align: center;
-      border: 2px solid var(--border);
-      /* box-shadow: 0 2px 12px var(--shadow); */
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .skill i {
-      font-size: 2.2rem;
-      margin-bottom: 0.7rem;
-      color: var(--skill-text);
-    }
-
-    .skill span {
-      display: block;
-      color: var(--skill-text);
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    .skill:hover {
-      transform: translate3d(0, -5px, 0) scale(1.04);
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
-      will-change: transform;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      padding: 1rem 0 2rem 0;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      border-radius: 1rem;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 12px var(--shadow);
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-card:hover {
-      transform: translate3d(0, -5px, 0) scale(1.02);
-      box-shadow: 0 4px 24px var(--shadow);
-      will-change: transform;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 180px;
-      background: var(--card-bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s;
-      filter: var(--image-filter, none);
-    }
-
-    .project-card:hover .project-image img {
-      transform: scale(1.05);
-    }
-
-    .project-content {
-      padding: 1.3rem 1.2rem 1.2rem 1.2rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .project-content h3 {
-      margin-bottom: 0.75rem;
-      color: var(--text);
-      font-size: 1.5rem;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    .project-content p {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      margin-bottom: 1.4rem;
-      line-height: 1.6;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-weight: 400;
-    }
-
-    .project-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .project-links a {
-      background: var(--background);
-      color: var(--text);
-      padding: 0.5rem 1.1rem;
-      border-radius: 0.5rem;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: background 0.2s, color 0.2s;
-      border: 1px solid var(--border);
-    }
-
-    .project-links a:hover,
-    .project-links a:focus {
-      background: var(--hover-bg);
-      color: var(--hover-text);
-      border: 1px solid var(--text);
-    }
-
-    footer.site-footer {
-      background: var(--background);
-      color: var(--text);
-      padding: 2.5rem 0 1.2rem 0;
-      margin-top: 3rem;
-      border-top: 1px solid var(--border);
-      font-size: 1rem;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      padding: 0 2rem;
-    }
-
-    .footer-about {
-      flex: 1 1 220px;
-      min-width: 200px;
-    }
-
-    .footer-logo {
-      font-size: 2rem;
-      font-weight: bold;
-      display: inline-block;
-      color: var(--text);
-      margin-bottom: 0.5rem;
-      width: auto;
-      height: auto;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      text-align: left;
-      margin-left: 0;
-      transition: color 0.3s ease;
-    }
-
-    .footer-about p {
-      color: var(--text-secondary);
-      margin: 0.5rem 0 0 0;
-    }
-
-    .footer-nav ul {
-      color: var(--text);
-      text-decoration: none;
-      padding: 0.3rem 0.7rem;
-      border-radius: 5px;
-      transition: color 0.2s, background 0.2s;
-    }
-
-    .footer-nav a:hover,
-    .footer-nav a:focus {
-      color: var(--hover-text);
-      background: var(--hover-bg);
-      outline: none;
-    }
-
-    .footer-nav a {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .footer-nav a {
-      color: var(--text);
-      background: transparent;
-      text-decoration: none;
-      padding: 0.3rem 0.7rem;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: color 0.2s, background 0.2s;
-    }
-
-    .footer-nav a:hover,
-    .footer-nav a:focus {
-      color: var(--hover-text);
-      background: var(--hover-bg);
-      outline: none;
-    }
-
-    .footer-nav a:focus {
-      color: #bbb;
-    }
-
-    .footer-contact {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      min-width: 200px;
-    }
-
-    .footer-contact a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-contact a:hover,
-    .footer-contact a:focus {
-      text-decoration: underline;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .footer-social a {
-      color: var(--text);
-      background: var(--card-bg);
-      border-radius: 50%;
-      padding: 0.7rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-      border: 1px solid var(--border);
-    }
-
-    .footer-social a:hover,
-    .footer-social a:focus {
-      background: var(--hover-bg);
-      color: var(--hover-text);
-      transform: translate3d(0, -2px, 0);
-      will-change: transform;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      color: var(--text-secondary);
-      margin-top: 2rem;
-      font-size: 0.98rem;
-    }
-
-    @media (max-width: 900px) {
-      main {
-        padding: 1rem;
-      }
-
-      .footer-content {
-        padding: 0 1rem;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .navbar {
-        flex-direction: row;
-        padding: 1rem 0.5rem;
-      }
-
-      .logo {
-        width: auto;
-        height: auto;
-        font-size: 1.5rem;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        padding: 0 0.5rem;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-content h1 {
-        font-size: 1.9rem;
-      }
-
-      .footer-logo {
-        width: auto;
-        height: auto;
+      .footer-links h3,
+      .footer-contact h3 {
+        font-family: "Outfit", sans-serif;
         font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        color: var(--text);
       }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .footer-links a {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--text);
       }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      .email-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text);
+        font-weight: 600;
+        margin-top: 1rem;
       }
-    }
-  </style>
-  <!-- <link rel="stylesheet" href="style.css"> -->
+      .email-link i {
+        transition: transform 0.3s;
+      }
+      .email-link:hover i {
+        transform: translateX(4px);
+      }
 
-  <meta property="og:url" content="https://nikhilnandanwar.me">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nikhil Nandanwar | Portfolio">
-  <meta name="twitter:description"
-    content="Explore the portfolio of Nikhil Nandanwar, a Full Stack Developer specializing in modern web applications. Discover projects, skills, and more.">
-  <meta name="twitter:site" content="@nixhiill">
-  <meta name="twitter:creator" content="@nixhiill">
-  <meta name="twitter:domain" content="nikhilnandanwar.me">
-  <meta name="twitter:url" content="https://nikhilnandanwar.me">
-  <meta name="twitter:image" content="https://nikhilnandanwar.me/assets/preview.webp">
-  <link rel="canonical" href="https://nikhilnandanwar.me">
-  <link rel="alternate" href="https://nikhilnandanwar.me" hreflang="en">
-  <link rel="alternate" href="https://nikhilnandanwar.me" hreflang="x-default">
-</head>
+      .footer-bottom {
+        max-width: 1100px;
+        margin: 3rem auto 0;
+        padding: 1.5rem var(--container-padding) 0;
+        border-top: 1px solid var(--border);
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+      }
 
-<body>
+      @media (max-width: 768px) {
+        .footer-container {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+          text-align: center;
+        }
+        .footer-brand p {
+          margin: 1rem auto 1.5rem;
+        }
+        .footer-social {
+          justify-content: center;
+        }
+      }
 
-  <header class="main-header">
-    <nav class="navbar" aria-label="Main Navigation">
-      <a href="#" class="logo" aria-label="Back to top">
-        NK
-      </a>
-      <button class="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="nav-links" id="main-nav">
-        <a href="#about">
-          About
-        </a>
-        <a href="#skills">
-          Skills
-        </a>
-        <a href="#projects">
-          Projects
-        </a>
-        <a href="https://drive.google.com/file/d/1DZwVoxybXBHe3pzchzLYJ-gFCik8KMfr/view" target="_blank"
-          rel="noopener noreferrer">Resume <i class="fas fa-external-link-alt"></i>
-        </a>
-        <button class="theme-toggle" aria-label="Toggle dark/light theme">
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
+      /* Mobile Nav */
+      .menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.4rem;
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .menu-btn {
+          display: block;
+        }
+        .nav-links {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: var(--card-bg);
+          flex-direction: column;
+          padding: 1.5rem;
+          border-bottom: 1px solid var(--border);
+          transform: translateY(-10px);
+          opacity: 0;
+          visibility: hidden;
+          transition: var(--transition);
+          box-shadow: var(--shadow);
+        }
+        .nav-links.active {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+        .hero-section {
+          min-height: 60vh;
+        }
+        .footer-content {
+          flex-direction: column;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hero-content,
+      .skills-section,
+      .projects-section {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+    </style>
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <meta property="og:url" content="https://nikhilnandanwar.me" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nikhil Nandanwar | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Explore the portfolio of Nikhil Nandanwar, a Full Stack Developer specializing in modern web applications. Discover projects, skills, and more."
+    />
+    <meta name="twitter:site" content="@nixhiill" />
+    <meta name="twitter:creator" content="@nixhiill" />
+    <meta name="twitter:domain" content="nikhilnandanwar.me" />
+    <meta name="twitter:url" content="https://nikhilnandanwar.me" />
+    <meta
+      name="twitter:image"
+      content="https://nikhilnandanwar.me/assets/preview.webp"
+    />
+    <link rel="canonical" href="https://nikhilnandanwar.me" />
+    <link rel="alternate" href="https://nikhilnandanwar.me" hreflang="en" />
+    <link
+      rel="alternate"
+      href="https://nikhilnandanwar.me"
+      hreflang="x-default"
+    />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="#" class="logo" aria-label="Back to top"> NK </a>
+        <button
+          class="menu-btn"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <i class="fas fa-bars"></i>
         </button>
-      </div>
-    </nav>
-  </header>
+        <div class="nav-links" id="main-nav">
+          <a href="#about"> About </a>
+          <a href="#skills"> Skills </a>
+          <a href="#projects"> Projects </a>
+          <a
+            href="https://drive.google.com/file/d/1DZwVoxybXBHe3pzchzLYJ-gFCik8KMfr/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Resume <i class="fas fa-external-link-alt"></i>
+          </a>
+          <button class="theme-toggle" aria-label="Toggle dark/light theme">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-  <main>
+    <main>
+      <section id="about" class="hero-section">
+        <div class="hero-content">
+          <h1>Hi, I'm <span class="accent">Nikhil Nandanwar</span></h1>
+          <p class="hero-description">
+            <strong>Full Stack Developer</strong> passionate about building
+            modern, scalable, and accessible web applications.<br />
+            Experienced in <b>React</b>, <b>Node.js</b>, <b>MongoDB</b>, and
+            more.<br />
+            I focus on clean code, SEO, and delivering a great user experience.
+          </p>
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nandanwar-nikhil"
+                title="LinkedIn"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/nikhil-nandanwar"
+                title="GitHub"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/nixhiill"
+                title="Twitter"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <section id="about" class="hero-section">
-      <div class="hero-content">
-        <h1>
-          Hi, I'm <span class="accent">Nikhil Nandanwar</span>
-        </h1>
-        <p class="hero-description">
-          <strong>Full Stack Developer</strong> passionate about building modern, scalable, and accessible web
-          applications.<br>
-          Experienced in <b>React</b>, <b>Node.js</b>, <b>MongoDB</b>, and more.<br>
-          I focus on clean code, SEO, and delivering a great user experience.
-        </p>
-        <ul class="social-links">
-          <li>
-            <a href="https://www.linkedin.com/in/nandanwar-nikhil" title="LinkedIn" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/nikhil-nandanwar" title="GitHub" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://x.com/nixhiill" title="Twitter" target="_blank" rel="noopener">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <section id="skills" class="skills-section">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <i class="fab fa-html5"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-js"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-react"></i>
+            <span>React</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-node-js"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database"></i>
+            <span>MongoDB</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-code"></i>
+            <span>C++</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database"></i><span>SQL</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-git-alt"></i><span>Git</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-react"></i><span>React Native</span>
+          </div>
+          <div class="skill">
+            <span
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="var(--skill-text)"
+                  d="M23.395 7.081c-.488-.207-1.053-.002-1.29.472-.224.448-.523.723-.914.838-.612.183-1.343-.052-1.685-.253-.451-.265-.974-.667-1.527-1.092C16.214 5.688 14.018 4 11 4 8.586 4 7.346 5.239 5.293 7.293 4.902 7.684 4.899 8.32 5.29 8.71 5.67 9.092 6.28 9.104 6.672 8.74c.01-.009.02-.019.03-.028.552-.426 4.03-.012 5.55 1.196C14.511 11.703 16.142 13 18 13c2.659 0 4.879-1.741 5.94-4.658C24.121 7.844 23.882 7.291 23.395 7.081zM18.395 14.081c-.488-.207-1.053-.002-1.29.472-.224.448-.523.723-.914.838-.612.18-1.343-.052-1.685-.253-.451-.265-.974-.667-1.527-1.092C11.214 12.688 9.018 11 6 11c-2.414 0-3.654 1.239-5.707 3.293-.391.391-.394 1.027-.003 1.417.38.382.991.395 1.383.03.01-.009.02-.019.03-.028.551-.426 4.031-.012 5.55 1.196C9.511 18.703 11.142 20 13 20c2.659 0 4.879-1.741 5.94-4.658C19.121 14.844 18.882 14.291 18.395 14.081z"
+                ></path>
+              </svg>
+            </span>
+            <span>TailwindCSS</span>
+          </div>
 
-    <section id="skills" class="skills-section">
-      <h2>Skills & Technologies</h2>
-      <div class="skills-grid">
-        <div class="skill">
-          <i class="fab fa-html5"></i>
-          <span>HTML5</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-css3-alt"></i>
-          <span>CSS3</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-js"></i>
-          <span>JavaScript</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-react"></i>
-          <span>React</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-node-js"></i>
-          <span>Node.js</span>
-        </div>
-        <div class="skill">
-          <i class="fas fa-database"></i>
-          <span>MongoDB</span>
-        </div>
-        <div class="skill">
-          <i class="fas fa-code"></i>
-          <span>C++</span>
-        </div>
-        <div class="skill">
-          <i class="fas fa-database"></i><span>SQL</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-git-alt"></i><span>Git</span>
-        </div>
-        <div class="skill">
-          <i class="fab fa-react"></i><span>React Native</span>
-        </div>
-        <div class="skill">
-          <span style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
-              <path fill="var(--skill-text)"
-                d="M23.395 7.081c-.488-.207-1.053-.002-1.29.472-.224.448-.523.723-.914.838-.612.183-1.343-.052-1.685-.253-.451-.265-.974-.667-1.527-1.092C16.214 5.688 14.018 4 11 4 8.586 4 7.346 5.239 5.293 7.293 4.902 7.684 4.899 8.32 5.29 8.71 5.67 9.092 6.28 9.104 6.672 8.74c.01-.009.02-.019.03-.028.552-.426 4.03-.012 5.55 1.196C14.511 11.703 16.142 13 18 13c2.659 0 4.879-1.741 5.94-4.658C24.121 7.844 23.882 7.291 23.395 7.081zM18.395 14.081c-.488-.207-1.053-.002-1.29.472-.224.448-.523.723-.914.838-.612.18-1.343-.052-1.685-.253-.451-.265-.974-.667-1.527-1.092C11.214 12.688 9.018 11 6 11c-2.414 0-3.654 1.239-5.707 3.293-.391.391-.394 1.027-.003 1.417.38.382.991.395 1.383.03.01-.009.02-.019.03-.028.551-.426 4.031-.012 5.55 1.196C9.511 18.703 11.142 20 13 20c2.659 0 4.879-1.741 5.94-4.658C19.121 14.844 18.882 14.291 18.395 14.081z">
-              </path>
+          <div class="skill">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="var(--skill-text)"
+                d="M18.974,31.5c0,0.828-0.671,1.5-1.5,1.5s-1.5-0.672-1.5-1.5v-14c0-0.653,0.423-1.231,1.045-1.43 c0.625-0.198,1.302,0.03,1.679,0.563l16.777,23.704C40.617,36.709,44,30.735,44,24c0-11-9-20-20-20S4,13,4,24s9,20,20,20 c3.192,0,6.206-0.777,8.89-2.122L18.974,22.216V31.5z M28.974,16.5c0-0.828,0.671-1.5,1.5-1.5s1.5,0.672,1.5,1.5v13.84l-3-4.227 V16.5z"
+              ></path>
             </svg>
-          </span>
-          <span>TailwindCSS</span>
+            <span>Next.js</span>
+          </div>
         </div>
+      </section>
 
-        <div class="skill">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
-            <path fill="var(--skill-text)"
-              d="M18.974,31.5c0,0.828-0.671,1.5-1.5,1.5s-1.5-0.672-1.5-1.5v-14c0-0.653,0.423-1.231,1.045-1.43 c0.625-0.198,1.302,0.03,1.679,0.563l16.777,23.704C40.617,36.709,44,30.735,44,24c0-11-9-20-20-20S4,13,4,24s9,20,20,20 c3.192,0,6.206-0.777,8.89-2.122L18.974,22.216V31.5z M28.974,16.5c0-0.828,0.671-1.5,1.5-1.5s1.5,0.672,1.5,1.5v13.84l-3-4.227 V16.5z">
-            </path>
-          </svg>
-          <span>Next.js</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- <section id="experience" class="experience-section">
+      <!-- <section id="experience" class="experience-section">
       <h2>Experience</h2>
       <div class="experience-grid">
         <div class="experience-card">
@@ -1062,161 +808,212 @@
       </div>
     </section> -->
 
-    <section id="projects" class="projects-section">
-      <h2>Featured Projects</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-image">
-            <img src="assets/onlineClipboard.webp" alt="ShareVault project screenshot" loading="lazy" decoding="async"
-              width="320" height="180">
-          </div>
-          <div class="project-content">
-            <h3>
-              Share Vault
-            </h3>
-            <p>
-              Share any text or file with anyone using just a simple 4-digit code—fast, secure, and hassle-free.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/nikhil-nandanwar/ShareVault" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i> Code
-              </a>
-              <a href="https://share-vault-mango.vercel.app/" target="_blank" rel="noopener">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
+      <section id="projects" class="projects-section">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/onlineClipboard.webp"
+                alt="ShareVault project screenshot"
+                loading="lazy"
+                decoding="async"
+                width="320"
+                height="180"
+              />
             </div>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-image">
-            <img src="assets/geminiChat.webp" alt="GeminiChat project screenshot" loading="lazy" decoding="async"
-              width="320" height="180">
-          </div>
-          <div class="project-content">
-            <h3>
-              GeminiChat
-            </h3>
-            <p>
-              A GeminiAI interface with features like conversation sharing and storage for future reference.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/nikhil-nandanwar/GeminiApp" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i> Code
-              </a>
-              <a href="https://ai-by-gemini.netlify.app/" target="_blank" rel="noopener">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
+            <div class="project-content">
+              <h3>Share Vault</h3>
+              <p>
+                Share any text or file with anyone using just a simple 4-digit
+                code—fast, secure, and hassle-free.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/nikhil-nandanwar/ShareVault"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a
+                  href="https://share-vault-mango.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-image">
-            <img src="assets/minesGame.webp" alt="Mines Game project screenshot" loading="lazy" decoding="async"
-              width="320" height="180">
-          </div>
-          <div class="project-content">
-            <h3>
-              Mines Game
-            </h3>
-            <p>
-              An online rendition of the classic Minesweeper game with adjustable difficulty levels.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/nikhil-nandanwar/Mines" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i> Code
-              </a>
-              <a href="https://mines-game.netlify.app/" target="_blank" rel="noopener">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
+          </article>
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/geminiChat.webp"
+                alt="GeminiChat project screenshot"
+                loading="lazy"
+                decoding="async"
+                width="320"
+                height="180"
+              />
             </div>
-          </div>
-        </article>
-      </div>
-    </section>
+            <div class="project-content">
+              <h3>GeminiChat</h3>
+              <p>
+                A GeminiAI interface with features like conversation sharing and
+                storage for future reference.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/nikhil-nandanwar/GeminiApp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a
+                  href="https://ai-by-gemini.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image">
+              <img
+                src="assets/minesGame.webp"
+                alt="Mines Game project screenshot"
+                loading="lazy"
+                decoding="async"
+                width="320"
+                height="180"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Mines Game</h3>
+              <p>
+                An online rendition of the classic Minesweeper game with
+                adjustable difficulty levels.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/nikhil-nandanwar/Mines"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a
+                  href="https://mines-game.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-about">
-        <span class="footer-logo">NK</span>
-        <p>Portfolio of Nikhil Nandanwar — Full Stack Developer. Connect for collaboration or opportunities.</p>
-      </div>
-      <nav class="footer-nav">
-        <ul>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="https://drive.google.com/file/d/1DZwVoxybXBHe3pzchzLYJ-gFCik8KMfr/view" target="_blank"
-              rel="noopener">Resume</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="footer-contact">
-        <ul class="footer-social">
-          <li>
-            <a href="https://www.linkedin.com/in/nandanwar-nikhil" target="_blank" rel="noopener">
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="footer-logo">NK</span>
+          <p>Building digital experiences with code and creativity.</p>
+          <div class="footer-social">
+            <a
+              href="https://www.linkedin.com/in/nandanwar-nikhil"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
               <i class="fab fa-linkedin-in"></i>
             </a>
-          </li>
-          <li>
-            <a href="https://github.com/nikhil-nandanwar" target="_blank" rel="noopener">
+            <a
+              href="https://github.com/nikhil-nandanwar"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
               <i class="fab fa-github"></i>
             </a>
-          </li>
-          <li>
-            <a href="https://x.com/nixhiill" target="_blank" rel="noopener">
+            <a
+              href="https://x.com/nixhiill"
+              target="_blank"
+              rel="noopener"
+              aria-label="Twitter"
+            >
               <i class="fab fa-twitter"></i>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1DZwVoxybXBHe3pzchzLYJ-gFCik8KMfr/view"
+                target="_blank"
+                rel="noopener"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p>Open for opportunities.</p>
+          <a href="mailto:nikhilnandanwar429@gmail.com" class="email-link">
+            Get in touch <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <small>&copy; 2025 Nikhil Nandanwar. All rights reserved.</small>
-    </div>
-  </footer>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nikhil Nandanwar. All rights reserved.</p>
+      </div>
+    </footer>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nikhil Nandanwar",
-    "url": "https://nikhilnandanwar.me",
-    "sameAs": [
-      "https://www.linkedin.com/in/nandanwar-nikhil",
-      "https://www.linkedin.com/in/nikhilnandanwar429",
-      "https://github.com/nikhil-nandanwar",
-      "https://x.com/nixhiill"
-    ],
-    "jobTitle": "Full Stack Developer",
-    "image": "https://nikhilnandanwar.me/assets/preview.webp",
-    "description": "Portfolio of Nikhil Nandanwar, a full-stack web developer specializing in React, Node.js, and MongoDB."
-  }
-  </script>
-  <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nikhil Nandanwar",
+        "url": "https://nikhilnandanwar.me",
+        "sameAs": [
+          "https://www.linkedin.com/in/nandanwar-nikhil",
+          "https://www.linkedin.com/in/nikhilnandanwar429",
+          "https://github.com/nikhil-nandanwar",
+          "https://x.com/nixhiill"
+        ],
+        "jobTitle": "Full Stack Developer",
+        "image": "https://nikhilnandanwar.me/assets/preview.webp",
+        "description": "Portfolio of Nikhil Nandanwar, a full-stack web developer specializing in React, Node.js, and MongoDB."
+      }
+    </script>
+    <script src="script.js" defer></script>
 
-  <!-- Service Worker Registration -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
-    }
-  </script>
-</body>
-
+    <!-- Service Worker Registration -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
 </html>
