@@ -1,4 +1,7 @@
-# Allow all search engines to crawl the website
+# SEO-Optimized Robots.txt Configuration for nikhilnandanwar.me
+# Last Updated: January 10, 2026
+
+# Allow all search engines to crawl the website and its assets
 User-agent: *
 Allow: /
 Allow: /assets/
@@ -6,28 +9,59 @@ Allow: /script.js
 Allow: /style.css
 Allow: /sw.js
 
-# Disallow private or sensitive paths (if any)
+# Disallow private or sensitive paths (if any exist)
 Disallow: /private/
 Disallow: /admin/
 
-# Crawl-delay for better server performance (optional)
+# Prevent crawling of search/query results
+Disallow: /search?
+Disallow: /*.json$
+
+# Crawl-delay for better server performance
 Crawl-delay: 1
 
-# Set sitemap location
+# Set sitemap location for search engines
 Sitemap: https://nikhilnandanwar.me/sitemap.xml
+Sitemap: https://blogs.nikhilnandanwar.me/sitemap.xml
 
-# Allow specific crawlers for better performance
+# Googlebot - Optimized for faster crawling and indexing
 User-agent: Googlebot
+Allow: /
 Crawl-delay: 0
+Request-rate: 50/1s
+
+# Googlebot-Image - Allow image crawling for image search
+User-agent: Googlebot-Image
+Allow: /assets/
+
+# Bingbot - Configuration for Bing indexing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
 Request-rate: 10/1s
 
-User-agent: Bingbot
+# Slurp - Yahoo search bot
+User-agent: Slurp
+Allow: /
 Crawl-delay: 1
-Request-rate: 5/1s
 
-# Block bad bots
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex - Russian search engine
+User-agent: YandexBot
+Allow: /
+
+# Block known bad/aggressive bots that waste resources
 User-agent: MJ12bot
 Disallow: /
 
 User-agent: AhrefsBot
-Crawl-delay: 10
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
