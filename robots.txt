@@ -1,3 +1,33 @@
+# Allow all search engines to crawl the website
 User-agent: *
 Allow: /
+Allow: /assets/
+Allow: /script.js
+Allow: /style.css
+Allow: /sw.js
+
+# Disallow private or sensitive paths (if any)
+Disallow: /private/
+Disallow: /admin/
+
+# Crawl-delay for better server performance (optional)
+Crawl-delay: 1
+
+# Set sitemap location
 Sitemap: https://nikhilnandanwar.me/sitemap.xml
+
+# Allow specific crawlers for better performance
+User-agent: Googlebot
+Crawl-delay: 0
+Request-rate: 10/1s
+
+User-agent: Bingbot
+Crawl-delay: 1
+Request-rate: 5/1s
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10

@@ -1,0 +1,87 @@
+{
+    "name": "Nikhil Nandanwar - Full Stack Developer Portfolio",
+    "short_name": "Nikhil Nandanwar",
+    "description": "Professional portfolio of Nikhil Nandanwar, showcasing full stack development projects and technical expertise.",
+    "start_url": "https://nikhilnandanwar.me",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#346ce4",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "assets/codeLogo.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/codeLogo.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/codeLogo.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "assets/preview.webp",
+            "sizes": "540x720",
+            "type": "image/webp",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "assets/preview.webp",
+            "sizes": "1280x720",
+            "type": "image/webp",
+            "form_factor": "wide"
+        }
+    ],
+    "categories": [
+        "business",
+        "productivity"
+    ],
+    "shortcuts": [
+        {
+            "name": "View Projects",
+            "short_name": "Projects",
+            "description": "View all featured projects",
+            "url": "/?section=projects",
+            "icons": [
+                {
+                    "src": "assets/codeLogo.webp",
+                    "sizes": "192x192",
+                    "type": "image/webp"
+                }
+            ]
+        },
+        {
+            "name": "View Skills",
+            "short_name": "Skills",
+            "description": "View all technical skills",
+            "url": "/?section=skills",
+            "icons": [
+                {
+                    "src": "assets/codeLogo.webp",
+                    "sizes": "192x192",
+                    "type": "image/webp"
+                }
+            ]
+        }
+    ],
+    "share_target": {
+        "action": "https://nikhilnandanwar.me",
+        "method": "GET",
+        "enctype": "application/x-www-form-urlencoded",
+        "params": {
+            "title": "title",
+            "text": "text",
+            "url": "url"
+        }
+    }
+}

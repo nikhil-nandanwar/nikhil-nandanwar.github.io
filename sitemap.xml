@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://nikhilnandanwar.me/</loc>
-  <priority>1.00</priority>
-  <lastmod>2025-07-12T19:34:33+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.mobile.googlebot.com/schemas/mobile-sitemaps/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Main homepage -->
+  <url>
+    <loc>https://nikhilnandanwar.me</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nikhilnandanwar.me/assets/preview.webp</image:loc>
+      <image:title>Nikhil Nandanwar Portfolio Preview</image:title>
+    </image:image>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://nikhilnandanwar.me#about</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Skills Section -->
+  <url>
+    <loc>https://nikhilnandanwar.me#skills</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Projects Section -->
+  <url>
+    <loc>https://nikhilnandanwar.me#projects</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nikhilnandanwar.me/assets/onlineClipboard.webp</image:loc>
+      <image:title>ShareVault Project</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nikhilnandanwar.me/assets/geminiChat.webp</image:loc>
+      <image:title>GeminiChat Project</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nikhilnandanwar.me/assets/minesGame.webp</image:loc>
+      <image:title>Mines Game Project</image:title>
+    </image:image>
+  </url>
+  
+  <!-- External Project Links (for reference) -->
+  <url>
+    <loc>https://github.com/nikhil-nandanwar</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.linkedin.com/in/nandanwar-nikhil</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
