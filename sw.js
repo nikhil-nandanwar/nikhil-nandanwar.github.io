@@ -2,7 +2,6 @@
 const CACHE_NAME = "portfolio-v1";
 const urlsToCache = [
   "/",
-  "/index.html",
   "/script.js",
   "/assets/codeLogo.webp",
   "/assets/geminiChat.webp",
