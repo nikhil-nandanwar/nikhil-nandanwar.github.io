@@ -9,100 +9,11 @@
   <url>
     <loc>https://nikhilnandanwar.me</loc>
     <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
     <image:image>
       <image:loc>https://nikhilnandanwar.me/assets/preview.webp</image:loc>
       <image:title>Nikhil Nandanwar - Full Stack Developer Portfolio</image:title>
     </image:image>
   </url>
   
-  <!-- About Section - Key for brand visibility -->
-  <url>
-    <loc>https://nikhilnandanwar.me#about</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  
-  <!-- Skills Section - Targets skill-based keywords -->
-  <url>
-    <loc>https://nikhilnandanwar.me#skills</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  
-  <!-- Projects Section - High intent for portfolio reviews -->
-  <url>
-    <loc>https://nikhilnandanwar.me#projects</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <image:image>
-      <image:loc>https://nikhilnandanwar.me/assets/onlineClipboard.webp</image:loc>
-      <image:title>ShareVault - Secure File Sharing Platform Project</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://nikhilnandanwar.me/assets/geminiChat.webp</image:loc>
-      <image:title>GeminiChat - AI Chat Application Project</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://nikhilnandanwar.me/assets/minesGame.webp</image:loc>
-      <image:title>Mines Game - Minesweeper Web Application Project</image:title>
-    </image:image>
-  </url>
-
-  <!-- Blog Subdomain - Main blog landing page -->
-  <url>
-    <loc>https://blogs.nikhilnandanwar.me</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  
-  <!-- External Project Links (for reference and authority building) -->
-  <url>
-    <loc>https://share-vault-mango.vercel.app</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://ai-by-gemini.netlify.app</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://mines-game.netlify.app</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  
-  <!-- GitHub Repository - Authority and code visibility -->
-  <url>
-    <loc>https://github.com/nikhil-nandanwar</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  
-  <!-- Professional Links - Social proof -->
-  <url>
-    <loc>https://www.linkedin.com/in/nandanwar-nikhil</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://x.com/nixhil_</loc>
-    <lastmod>2026-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.65</priority>
-  </url>
+ 
 </urlset>
