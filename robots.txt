@@ -44,5 +44,5 @@ User-agent: dotbot
 Disallow: /
 
 # Sitemaps
-Sitemap: https://nikhilnandanwar.me/sitemap.xml 
-Sitemap: https://blogs.nikhilnandanwar.me/sitemap.xml
+Sitemap: https://nixhil.dev/sitemap.xml 
+Sitemap: https://blogs.nixhil.dev/sitemap.xml

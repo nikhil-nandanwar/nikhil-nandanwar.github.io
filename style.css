@@ -38,7 +38,9 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 0.75rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .experience-card:hover {
@@ -138,7 +140,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 * {
@@ -162,8 +166,12 @@ body {
 *,
 *::before,
 *::after {
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease, box-shadow 0.3s ease, outline-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    outline-color 0.3s ease;
 }
 
 a {
@@ -268,7 +276,9 @@ header.main-header {
   border-radius: 6px;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .nav-links a:hover,
@@ -386,7 +396,11 @@ main {
   font-size: 1.3rem;
   border: 1.5px solid var(--border);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s,
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s,
     border-color 0.2s;
   padding: 0;
 }
@@ -454,7 +468,9 @@ main {
   text-align: center;
   border: 2px solid var(--border);
   /* box-shadow: 0 2px 12px var(--shadow); */
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .skill i {
@@ -488,7 +504,9 @@ main {
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: 0 2px 12px var(--shadow);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   display: flex;
   flex-direction: column;
 }
@@ -561,7 +579,9 @@ main {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   border: 1px solid var(--border);
 }
 
@@ -623,7 +643,9 @@ footer.site-footer {
   text-decoration: none;
   padding: 0.3rem 0.7rem;
   border-radius: 5px;
-  transition: color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s;
 }
 
 .footer-nav a:hover,
@@ -649,7 +671,9 @@ footer.site-footer {
   padding: 0.3rem 0.7rem;
   border-radius: 5px;
   font-weight: 500;
-  transition: color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s;
 }
 
 .footer-nav a:hover,
